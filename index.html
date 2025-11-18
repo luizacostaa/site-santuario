@@ -4,792 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Santuário Arquidiocesano Nossa Senhora Aparecida</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Georgia', serif;
-      background: #ffffff;
-      color: #000000;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    /* Header */
-    .site-header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-      height: 214px;
-      display: flex;
-      align-items: center;
-      padding: 0 40px;
-      position: relative;
-    }
-
-    .logo-container {
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .logo-container:hover {
-      transform: scale(1.05);
-    }
-
-    .logo {
-      width: 150px;
-      height: 150px;
-      background: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #1e3a8a;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      line-height: 1.2;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    /* Navigation */
-    .main-nav {
-      background: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 20px;
-    }
-
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 5px;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-link {
-      display: block;
-      padding: 20px 20px;
-      color: #000000;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s ease, color 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .nav-link:hover {
-      background: #eff6ff;
-      color: #1e3a8a;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: white;
-      min-width: 220px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      z-index: 200;
-    }
-
-    .nav-item:hover > .dropdown-menu {
-      display: block;
-    }
-
-    .dropdown-menu .nav-link {
-      padding: 15px 20px;
-    }
-
-    .dropdown-menu .dropdown-menu {
-      left: 100%;
-      top: 0;
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 28px;
-      cursor: pointer;
-      padding: 10px;
-      color: #000000;
-    }
-
-    /* Hero Carousel */
-    .hero-carousel {
-      position: relative;
-      width: 100%;
-      height: 600px;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .carousel-slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .carousel-slide.active {
-      opacity: 1;
-    }
-
-    .carousel-content {
-      position: absolute;
-      bottom: 80px;
-      left: 50px;
-      right: 50px;
-      background: rgba(0,0,0,0.6);
-      padding: 30px;
-      border-radius: 10px;
-      color: white;
-    }
-
-    .carousel-content h2 {
-      margin: 0 0 15px 0;
-      font-size: 36px;
-    }
-
-    .carousel-content p {
-      margin: 0 0 20px 0;
-      font-size: 18px;
-    }
-
-    .btn-read-more {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      font-weight: 500;
-    }
-
-    .btn-read-more:hover {
-      background: #1e40af;
-    }
-
-    .carousel-dots {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-    }
-
-    .carousel-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.5);
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .carousel-dot.active {
-      background: white;
-    }
-
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      z-index: 10;
-    }
-
-    .carousel-arrow:hover {
-      background: rgba(0,0,0,0.8);
-    }
-
-    .carousel-arrow.prev {
-      left: 20px;
-    }
-
-    .carousel-arrow.next {
-      right: 20px;
-    }
-
-    /* Highlights Section */
-    .highlights-section {
-      padding: 80px 40px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 42px;
-      margin-bottom: 50px;
-      color: #1e3a8a;
-    }
-
-    .highlights-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      margin-bottom: 60px;
-    }
-
-    .highlight-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .highlight-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-    }
-
-    .highlight-image {
-      width: 100%;
-      height: 250px;
-      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-    }
-
-    .highlight-content {
-      padding: 25px;
-    }
-
-    .highlight-content h3 {
-      margin: 0 0 15px 0;
-      font-size: 24px;
-      color: #1e3a8a;
-    }
-
-    .highlight-content p {
-      margin: 0;
-      color: #4b5563;
-      line-height: 1.6;
-    }
-
-    /* Special Section with Golden Sparkles */
-    .sparkle-section {
-      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-      padding: 80px 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sparkle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #fbbf24;
-      border-radius: 50%;
-      opacity: 0;
-      animation: sparkleAnim 3s infinite;
-      box-shadow: 0 0 10px #fbbf24;
-    }
-
-    @keyframes sparkleAnim {
-      0%, 100% { opacity: 0; transform: scale(0); }
-      50% { opacity: 1; transform: scale(1); }
-    }
-
-    .sparkle-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Links Section */
-    .links-section {
-      background: #1e3a8a;
-      padding: 80px 40px;
-    }
-
-    .links-grid {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .link-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .link-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .link-image {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 50px;
-    }
-
-    .link-caption {
-      padding: 20px;
-      font-size: 18px;
-      font-weight: 500;
-      color: #1e3a8a;
-    }
-
-    /* Contact Section */
-    .contact-section {
-      background: #92400e;
-      color: white;
-      padding: 60px 40px;
-    }
-
-    .contact-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-
-    .contact-info h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-      line-height: 1.8;
-    }
-
-    /* Footer */
-    .site-footer {
-      background: #1e3a8a;
-      color: white;
-      padding: 40px;
-      text-align: center;
-    }
-
-    .footer-logo {
-      width: 80px;
-      height: 80px;
-      background: white;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #1e3a8a;
-      font-size: 10px;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-
-    .footer-text {
-      font-size: 18px;
-      margin: 0;
-    }
-
-    /* Content Pages */
-    .content-page {
-      display: none;
-      min-height: 60vh;
-    }
-
-    .content-page.active {
-      display: block;
-    }
-
-    .page-header {
-      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-      padding: 60px 40px;
-      text-align: center;
-    }
-
-    .page-header h1 {
-      font-size: 48px;
-      color: #1e3a8a;
-      margin: 0;
-    }
-
-    .page-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 40px;
-    }
-
-    .page-content h2 {
-      color: #1e3a8a;
-      font-size: 32px;
-      margin: 40px 0 20px 0;
-    }
-
-    .page-content p {
-      line-height: 1.8;
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-
-    .page-image {
-      width: 100%;
-      height: 400px;
-      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-      border-radius: 10px;
-      margin: 30px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 80px;
-    }
-
-    .clergy-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .clergy-card {
-      text-align: center;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .clergy-photo {
-      width: 150px;
-      height: 150px;
-      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-      border-radius: 50%;
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 50px;
-    }
-
-    .clergy-card h3 {
-      color: #1e3a8a;
-      margin: 0 0 10px 0;
-    }
-
-    /* News Grid */
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 30px;
-    }
-
-    .news-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .news-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .news-image {
-      width: 100%;
-      height: 250px;
-      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-    }
-
-    .news-content {
-      padding: 25px;
-    }
-
-    .news-content h3 {
-      color: #1e3a8a;
-      margin: 0 0 15px 0;
-      font-size: 22px;
-    }
-
-    .news-content p {
-      margin: 0 0 15px 0;
-      color: #4b5563;
-    }
-
-    .news-date {
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    /* Gallery */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .album-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .album-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .album-cover {
-      width: 100%;
-      height: 250px;
-      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-    }
-
-    .album-title {
-      padding: 20px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: 500;
-      color: #1e3a8a;
-    }
-
-    /* Communities Grid */
-    .communities-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-
-    .community-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .community-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .community-image {
-      width: 100%;
-      height: 250px;
-      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-    }
-
-    .community-info {
-      padding: 25px;
-    }
-
-    .community-info h3 {
-      color: #1e3a8a;
-      margin: 0 0 15px 0;
-      font-size: 24px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .site-header {
-        height: 150px;
-        padding: 0 20px;
-      }
-
-      .logo {
-        width: 100px;
-        height: 100px;
-        font-size: 11px;
-        padding: 15px;
-      }
-
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-      }
-
-      .mobile-menu-btn {
-        display: block;
-        align-self: flex-end;
-      }
-
-      .nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-      }
-
-      .nav-menu.active {
-        display: flex;
-      }
-
-      .nav-item {
-        width: 100%;
-      }
-
-      .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: #f3f4f6;
-      }
-
-      .dropdown-menu .dropdown-menu {
-        position: static;
-        background: #e5e7eb;
-      }
-
-      .hero-carousel {
-        height: 400px;
-      }
-
-      .carousel-content {
-        bottom: 40px;
-        left: 20px;
-        right: 20px;
-        padding: 20px;
-      }
-
-      .carousel-content h2 {
-        font-size: 24px;
-      }
-
-      .carousel-content p {
-        font-size: 16px;
-      }
-
-      .section-title {
-        font-size: 32px;
-      }
-
-      .page-header h1 {
-        font-size: 36px;
-      }
-
-      .highlights-grid,
-      .news-grid,
-      .gallery-grid,
-      .communities-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-container {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <!-- <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script> -->
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="style.css">
  </head>
- <body><!-- Header -->
-  <header class="site-header">
-   <div class="logo-container" onclick="navigateTo('home')">
-    <div class="logo" id="headerLogo">
-     Santuário<br>
-     N.S. Aparecida
-    </div>
-   </div>
-  </header><!-- Navigation -->
-  <nav class="main-nav">
-   <div class="nav-container"><button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-    <ul class="nav-menu" id="navMenu">
-     <li class="nav-item"><a href="#" class="nav-link" onclick="return false">O Santuário</a>
-      <ul class="dropdown-menu">
-       <li><a href="#" class="nav-link" onclick="navigateTo('historia'); return false">História</a></li>
-       <li><a href="#" class="nav-link" onclick="navigateTo('padroeira'); return false">A Padroeira</a></li>
-       <li class="nav-item"><a href="#" class="nav-link" onclick="return false">Clero ▸</a>
-        <ul class="dropdown-menu">
-         <li><a href="#" class="nav-link" onclick="navigateTo('paroco'); return false">O Pároco</a></li>
-         <li><a href="#" class="nav-link" onclick="navigateTo('parocos-anteriores'); return false">Párocos Anteriores</a></li>
-        </ul></li>
-      </ul></li>
-     <li class="nav-item"><a href="#" class="nav-link" onclick="navigateTo('noticias'); return false">Notícias</a></li>
-     <li class="nav-item"><a href="#" class="nav-link" onclick="navigateTo('comunidades'); return false">Comunidades</a></li>
-     <li class="nav-item"><a href="#" class="nav-link" onclick="return false">Pastorais e Movimentos</a>
-      <ul class="dropdown-menu">
-       <li class="nav-item"><a href="#" class="nav-link" onclick="return false">Pastorais ▸</a>
-        <ul class="dropdown-menu">
-         <li><a href="#" class="nav-link" onclick="navigateTo('pastoral-dizimo'); return false">Pastoral do Dízimo</a></li>
-         <li><a href="#" class="nav-link" onclick="navigateTo('pascom'); return false">PASCOM</a></li>
-        </ul></li>
-       <li><a href="#" class="nav-link" onclick="navigateTo('shekinah'); return false">Grupo Shekinah</a></li>
-       <li><a href="#" class="nav-link" onclick="navigateTo('terco-homens'); return false">Terço dos Homens</a></li>
-       <li><a href="#" class="nav-link" onclick="navigateTo('terco-filhas'); return false">Terço das Filhas de Maria</a></li>
-       <li class="nav-item"><a href="#" class="nav-link" onclick="return false">RCC ▸</a>
-        <ul class="dropdown-menu">
-         <li><a href="#" class="nav-link" onclick="navigateTo('rcc-oracao'); return false">Grupo de Oração</a></li>
-         <li><a href="#" class="nav-link" onclick="navigateTo('rcc-jovens'); return false">Grupo de Jovens</a></li>
-        </ul></li>
-      </ul></li>
-     <li class="nav-item"><a href="#" class="nav-link" onclick="navigateTo('galeria'); return false">Galeria</a></li>
-     <li class="nav-item"><a href="#" class="nav-link" onclick="navigateTo('dizimo'); return false">Dízimo</a></li>
-    </ul>
-   </div>
+ <body>
+  <!-- Header -->
+  <div data-include="./components/header.html"></div>
+  <!-- Navigation -->
+  <div data-include="./components/topo.html"></div>
 
-
-
-  </nav><!-- Home Page -->
+  <!-- Home Page -->
   <div id="homePage" class="content-page active"><!-- Hero Carousel -->
    <section class="hero-carousel" id="heroCarousel"><button class="carousel-arrow prev" onclick="changeSlide(-1)">❮</button> <button class="carousel-arrow next" onclick="changeSlide(1)">❯</button>
     <div class="carousel-slide active" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
@@ -818,7 +45,8 @@
     </div>
     <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide(0)"></span> <span class="carousel-dot" onclick="goToSlide(1)"></span> <span class="carousel-dot" onclick="goToSlide(2)"></span> <span class="carousel-dot" onclick="goToSlide(3)"></span>
     </div>
-   </section><!-- Highlights Section -->
+   </section>
+   <!-- Highlights Section -->
    <section class="highlights-section">
     <h2 class="section-title" id="highlightsTitle">Destaques</h2>
     <div class="highlights-grid">
@@ -850,7 +78,8 @@
       </div>
      </div>
     </div>
-   </section><!-- Sparkle Section -->
+   </section>
+   <!-- Sparkle Section -->
    <section class="sparkle-section" id="sparkleSection">
     <div class="sparkle-content">
      <h2 class="section-title">Venha nos Visitar</h2>
@@ -858,7 +87,8 @@
       <p style="text-align: center; font-size: 20px;">O Santuário Arquidiocesano Nossa Senhora Aparecida abre suas portas para todos que buscam um momento de paz, reflexão e proximidade com Deus. Seja bem-vindo à casa de Maria!</p>
      </div>
     </div>
-   </section><!-- Links Section -->
+   </section>
+   <!-- Links Section -->
    <section class="links-section">
     <div class="links-grid">
      <div class="link-card" onclick="navigateTo('pastoral-dizimo')">
@@ -895,7 +125,8 @@
      </div>
     </div>
    </section>
-  </div><!-- História Page -->
+  </div>
+  <!-- História Page -->
   <div id="historiaPage" class="content-page">
    <div class="page-header">
     <h1>História do Santuário</h1>
@@ -919,7 +150,8 @@
     <h2>Reconhecimento Arquidiocesano</h2>
     <p>O reconhecimento como Santuário Arquidiocesano representa a importância e o significado deste local sagrado para a Igreja e para todos os devotos. Este título honra a tradição de fé e devoção que caracteriza este espaço sagrado.</p>
    </div>
-  </div><!-- A Padroeira Page -->
+  </div>
+  <!-- A Padroeira Page -->
   <div id="padroeiraPage" class="content-page">
    <div class="page-header">
     <h1>Nossa Senhora Aparecida</h1>
@@ -945,7 +177,8 @@
     <p>O Santuário Arquidiocesano Nossa Senhora Aparecida mantém viva esta tradição de fé e devoção mariana. Aqui, os fiéis encontram um espaço de oração, acolhimento e renovação espiritual, seguindo o exemplo de amor e dedicação de Nossa Senhora.</p>
     <p>Que a Mãe Aparecida continue intercedendo por todos nós e nos guiando sempre no caminho da fé e do amor a seu Filho Jesus Cristo.</p>
    </div>
-  </div><!-- O Pároco Page -->
+  </div>
+  <!-- O Pároco Page -->
   <div id="parocoPage" class="content-page">
    <div class="page-header">
     <h1>O Pároco</h1>
@@ -972,7 +205,8 @@
     <h2>Visão Pastoral</h2>
     <p>"Meu desejo é que este Santuário seja uma casa acolhedora para todos, onde cada pessoa possa encontrar paz, conforto e renovação em sua fé. Que Nossa Senhora Aparecida interceda por todos nós e nos conduza sempre mais perto de seu Filho Jesus."</p>
    </div>
-  </div><!-- Párocos Anteriores Page -->
+  </div>
+  <!-- Párocos Anteriores Page -->
   <div id="parocosAnterioresPage" class="content-page">
    <div class="page-header">
     <h1>Párocos Anteriores</h1>
@@ -1025,7 +259,8 @@
     </div>
     <p style="margin-top: 40px; text-align: center; font-style: italic;">Somos gratos a todos os párocos que dedicaram suas vidas ao serviço desta comunidade de fé.</p>
    </div>
-  </div><!-- Notícias Page -->
+  </div>
+  <!-- Notícias Page -->
   <div id="noticiasPage" class="content-page">
    <div class="page-header">
     <h1>Notícias</h1>
@@ -1106,7 +341,8 @@
      </div>
     </div>
    </div>
-  </div><!-- Notícia Individual (exemplo) -->
+  </div>
+  <!-- Notícia Individual (exemplo) -->
   <div id="noticia-1Page" class="content-page">
    <div class="page-header">
     <h1>Festa da Padroeira 2024</h1>
@@ -1134,7 +370,8 @@
     <p>Agradecemos a todos os voluntários, ministros, membros das pastorais e movimentos que trabalharam incansavelmente para que esta celebração fosse um sucesso. Que Nossa Senhora Aparecida continue abençoando e protegendo nossa comunidade!</p>
     <p style="margin-top: 40px; color: #6b7280; font-style: italic;">Fonte: Comunicação do Santuário Arquidiocesano Nossa Senhora Aparecida</p>
    </div>
-  </div><!-- Comunidades Page -->
+  </div>
+  <!-- Comunidades Page -->
   <div id="comunidadesPage" class="content-page">
    <div class="page-header">
     <h1>Nossas Comunidades</h1>
@@ -1180,7 +417,8 @@
      </div>
     </div>
    </div>
-  </div><!-- Comunidade Individual (exemplo) -->
+  </div>
+  <!-- Comunidade Individual (exemplo) -->
   <div id="comunidade-1Page" class="content-page">
    <div class="page-header">
     <h1>Comunidade São José</h1>
@@ -1208,7 +446,8 @@
     <p><strong>Coordenador:</strong> Sr. José Carlos Almeida</p>
     <p style="margin-top: 40px; text-align: center; font-style: italic;">Venha nos visitar! Você será sempre bem-vindo!</p>
    </div>
-  </div><!-- Pastoral do Dízimo Page -->
+  </div>
+  <!-- Pastoral do Dízimo Page -->
   <div id="pastoralDizimoPage" class="content-page">
    <div class="page-header">
     <h1>Pastoral do Dízimo</h1>
@@ -1236,7 +475,8 @@
     <p>📱 Instagram: @pastoraldizimo.santuario</p>
     <p>📘 Facebook: Pastoral do Dízimo - Santuário N.S. Aparecida</p>
    </div>
-  </div><!-- PASCOM Page -->
+  </div>
+  <!-- PASCOM Page -->
   <div id="pascomPage" class="content-page">
    <div class="page-header">
     <h1>PASCOM - Pastoral da Comunicação</h1>
@@ -1272,7 +512,8 @@
     <p>📘 Facebook: PASCOM - Santuário N.S. Aparecida</p>
     <p>🎬 YouTube: Santuário N.S. Aparecida Oficial</p>
    </div>
-  </div><!-- Grupo Shekinah Page -->
+  </div>
+  <!-- Grupo Shekinah Page -->
   <div id="shekinahPage" class="content-page">
    <div class="page-header">
     <h1>Grupo Shekinah</h1>
@@ -1297,7 +538,8 @@
     <p>Todos são bem-vindos aos nossos encontros! Não é necessário saber cantar ou tocar instrumentos. O mais importante é ter um coração aberto para louvar a Deus e crescer na fé junto com a comunidade.</p>
     <p>Para mais informações, entre em contato através de nossas redes sociais ou procure-nos após as missas dominicais.</p>
    </div>
-  </div><!-- Terço dos Homens Page -->
+  </div>
+  <!-- Terço dos Homens Page -->
   <div id="tercoHomensPage" class="content-page">
    <div class="page-header">
     <h1>Terço dos Homens</h1>
@@ -1322,7 +564,8 @@
     <p>Se você é homem e deseja fortalecer sua vida espiritual, encontrar apoio na fé e conhecer outros irmãos que buscam viver o Evangelho, venha participar do Terço dos Homens!</p>
     <p>Não é necessário inscrição prévia. Basta chegar no horário e você será muito bem recebido por nossos irmãos.</p>
    </div>
-  </div><!-- Terço das Filhas de Maria Page -->
+  </div>
+  <!-- Terço das Filhas de Maria Page -->
   <div id="tercoFilhasPage" class="content-page">
    <div class="page-header">
     <h1>Terço das Filhas de Maria</h1>
@@ -1353,7 +596,8 @@
     <p>Toda mulher que deseja crescer em sua devoção a Nossa Senhora está convidada a participar do nosso grupo. Aqui você encontrará um ambiente acolhedor de oração, partilha e amizade cristã.</p>
     <p>Para participar, basta comparecer em um de nossos encontros. Será um prazer recebê-la em nossa família mariana!</p>
    </div>
-  </div><!-- RCC Grupo de Oração Page -->
+  </div>
+  <!-- RCC Grupo de Oração Page -->
   <div id="rccOracaoPage" class="content-page">
    <div class="page-header">
     <h1>RCC - Grupo de Oração</h1>
@@ -1386,7 +630,8 @@
     <p>Também oferecemos o Seminário de Vida no Espírito Santo, um curso de formação básica sobre a vida carismática que acontece anualmente.</p>
     <p>Venha experimentar o amor de Deus de uma forma nova! Todos são bem-vindos!</p>
    </div>
-  </div><!-- RCC Grupo de Jovens Page -->
+  </div>
+  <!-- RCC Grupo de Jovens Page -->
   <div id="rccJovensPage" class="content-page">
    <div class="page-header">
     <h1>RCC - Grupo de Jovens</h1>
@@ -1418,7 +663,8 @@
     <p>Se você tem entre 15 e 35 anos e quer viver sua fé de forma vibrante, fazer amigos que compartilham os mesmos valores e experimentar o poder do Espírito Santo, o Grupo de Jovens da RCC é o seu lugar!</p>
     <p>Não é necessário fazer parte da RCC ou ter experiência prévia. Venha como você está e descubra o plano maravilhoso que Deus tem para sua vida!</p>
    </div>
-  </div><!-- Galeria Page -->
+  </div>
+  <!-- Galeria Page -->
   <div id="galeriaPage" class="content-page">
    <div class="page-header">
     <h1>Galeria de Fotos</h1>
@@ -1500,8 +746,10 @@
      </div>
     </div>
    </div>
-  </div><!-- Dízimo Page -->
-  <div id="dizimoPage" class="content-page"><!-- Dízimo Carousel -->
+  </div>
+  <!-- Dízimo Page -->
+  <div id="dizimoPage" class="content-page">
+    <!-- Dízimo Carousel -->
    <section class="hero-carousel" id="dizimoCarousel"><button class="carousel-arrow prev" onclick="changeDizimoSlide(-1)">❮</button> <button class="carousel-arrow next" onclick="changeDizimoSlide(1)">❯</button>
     <div class="carousel-slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
      <div class="carousel-content">
@@ -1585,7 +833,8 @@
     </div>
     <p style="margin-top: 60px; text-align: center; font-size: 20px; font-style: italic;">"Cada um dê conforme tiver resolvido em seu coração, não com pesar ou por constrangimento, pois Deus ama quem dá com alegria." (2 Coríntios 9:7)</p>
    </div>
-  </div><!-- Seja Dizimista Page -->
+  </div>
+  <!-- Seja Dizimista Page -->
   <div id="sejaDizimistaPage" class="content-page">
    <div class="page-header">
     <h1>Venha Ser Dizimista</h1>
@@ -1636,7 +885,8 @@
     </ul>
     <p style="margin-top: 40px; text-align: center; font-size: 20px;">Venha fazer parte da família de dizimistas do Santuário! Sua contribuição faz a diferença!</p>
    </div>
-  </div><!-- Dimensões do Dízimo Page -->
+  </div>
+  <!-- Dimensões do Dízimo Page -->
   <div id="dimensoesDizimoPage" class="content-page">
    <div class="page-header">
     <h1>Dimensões do Dízimo</h1>
@@ -1680,8 +930,9 @@
     <p>Pessoalmente, o dízimo é uma escola de generosidade e desapego. Ao ofertar regularmente uma parte de nossos ganhos, aprendemos a administrar melhor nossos recursos, a valorizar o que temos e a confiar mais em Deus do que em nossos próprios esforços.</p>
     <p>Muitos dizimistas testemunham que, ao começar a dizimar, experimentaram uma transformação em sua vida financeira e espiritual, sendo abençoados de maneiras inesperadas.</p>
    </div>
-  </div><!-- Contact Section -->
-  <section class="contact-section">
+  </div>
+  <!-- Contact Section -->
+  <div data-include="./components/contato.html"></div>
    <div class="contact-container">
     <div class="contact-info">
      <h3 id="contactTitle">Entre em Contato</h3>
@@ -1703,227 +954,18 @@
      <p>Sábado: 18h (Missa de Sábado)</p>
     </div>
    </div>
-  </section><!-- Footer -->
-  <footer class="site-footer">
+  </section> -->
+  <!-- Footer -->
+  <div data-include="./components/footer.html"></div>  
    <div class="footer-logo">
     Santuário<br>
     N.S. Aparecida
    </div>
    <p class="footer-text" id="footerText">Santuário Arquidiocesano Nossa Senhora Aparecida</p>
    <p style="margin-top: 20px; font-size: 14px;">© 2024 Todos os direitos reservados</p>
-  </footer>
-  <script>
-    // Configuration
-    const defaultConfig = {
-      site_title: "Santuário Arquidiocesano Nossa Senhora Aparecida",
-      hero_title: "Bem-vindos ao Santuário",
-      hero_subtitle: "Um lugar sagrado de fé, oração e comunhão com Nossa Senhora Aparecida",
-      highlights_title: "Destaques",
-      footer_text: "Santuário Arquidiocesano Nossa Senhora Aparecida",
-      contact_title: "Entre em Contato"
-    };
-
-    // Current page tracking
-    let currentPage = 'home';
-
-    // Carousel state
-    let currentSlide = 0;
-    let currentDizimoSlide = 0;
-    let carouselInterval;
-    let dizimoCarouselInterval;
-
-    // Navigation
-    function navigateTo(page) {
-      // Hide all pages
-      const pages = document.querySelectorAll('.content-page');
-      pages.forEach(p => p.classList.remove('active'));
-      
-      // Show selected page
-      const targetPage = document.getElementById(page + 'Page');
-      if (targetPage) {
-        targetPage.classList.add('active');
-        currentPage = page;
-        window.scrollTo(0, 0);
-        
-        // Start appropriate carousel
-        if (page === 'home') {
-          startCarousel();
-          stopDizimoCarousel();
-        } else if (page === 'dizimo') {
-          startDizimoCarousel();
-          stopCarousel();
-        } else {
-          stopCarousel();
-          stopDizimoCarousel();
-        }
-      }
-    }
-
-    // Mobile menu toggle
-    function toggleMobileMenu() {
-      const menu = document.getElementById('navMenu');
-      menu.classList.toggle('active');
-    }
-
-    // Hero Carousel functions
-    function changeSlide(direction) {
-      const slides = document.querySelectorAll('#heroCarousel .carousel-slide');
-      const dots = document.querySelectorAll('#heroCarousel .carousel-dot');
-      
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
-      
-      currentSlide = (currentSlide + direction + slides.length) % slides.length;
-      
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-    }
-
-    function goToSlide(index) {
-      const slides = document.querySelectorAll('#heroCarousel .carousel-slide');
-      const dots = document.querySelectorAll('#heroCarousel .carousel-dot');
-      
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
-      
-      currentSlide = index;
-      
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-    }
-
-    function startCarousel() {
-      stopCarousel();
-      carouselInterval = setInterval(() => {
-        changeSlide(1);
-      }, 5000);
-    }
-
-    function stopCarousel() {
-      if (carouselInterval) {
-        clearInterval(carouselInterval);
-      }
-    }
-
-    // Dízimo Carousel functions
-    function changeDizimoSlide(direction) {
-      const slides = document.querySelectorAll('#dizimoCarousel .carousel-slide');
-      const dots = document.querySelectorAll('#dizimoCarousel .carousel-dot');
-      
-      slides[currentDizimoSlide].classList.remove('active');
-      dots[currentDizimoSlide].classList.remove('active');
-      
-      currentDizimoSlide = (currentDizimoSlide + direction + slides.length) % slides.length;
-      
-      slides[currentDizimoSlide].classList.add('active');
-      dots[currentDizimoSlide].classList.add('active');
-    }
-
-    function goToDizimoSlide(index) {
-      const slides = document.querySelectorAll('#dizimoCarousel .carousel-slide');
-      const dots = document.querySelectorAll('#dizimoCarousel .carousel-dot');
-      
-      slides[currentDizimoSlide].classList.remove('active');
-      dots[currentDizimoSlide].classList.remove('active');
-      
-      currentDizimoSlide = index;
-      
-      slides[currentDizimoSlide].classList.add('active');
-      dots[currentDizimoSlide].classList.add('active');
-    }
-
-    function startDizimoCarousel() {
-      stopDizimoCarousel();
-      dizimoCarouselInterval = setInterval(() => {
-        changeDizimoSlide(1);
-      }, 5000);
-    }
-
-    function stopDizimoCarousel() {
-      if (dizimoCarouselInterval) {
-        clearInterval(dizimoCarouselInterval);
-      }
-    }
-
-    // Create sparkles
-    function createSparkles() {
-      const sparkleSection = document.getElementById('sparkleSection');
-      if (!sparkleSection) return;
-      
-      for (let i = 0; i < 50; i++) {
-        const sparkle = document.createElement('div');
-        sparkle.className = 'sparkle';
-        sparkle.style.left = Math.random() * 100 + '%';
-        sparkle.style.top = Math.random() * 100 + '%';
-        sparkle.style.animationDelay = Math.random() * 3 + 's';
-        sparkleSection.appendChild(sparkle);
-      }
-    }
-
-    // Initialize
-    function init() {
-      createSparkles();
-      startCarousel();
-      
-      if (window.elementSdk) {
-        window.elementSdk.init({
-          defaultConfig,
-          onConfigChange: async (config) => {
-            const headerLogo = document.getElementById('headerLogo');
-            const heroTitle1 = document.getElementById('heroTitle1');
-            const heroSubtitle1 = document.getElementById('heroSubtitle1');
-            const highlightsTitle = document.getElementById('highlightsTitle');
-            const footerText = document.getElementById('footerText');
-            const contactTitle = document.getElementById('contactTitle');
-            
-            if (headerLogo) {
-              headerLogo.textContent = (config.site_title || defaultConfig.site_title).replace('Santuário Arquidiocesano ', '').replace(' ', '\n');
-            }
-            
-            if (heroTitle1) {
-              heroTitle1.textContent = config.hero_title || defaultConfig.hero_title;
-            }
-            
-            if (heroSubtitle1) {
-              heroSubtitle1.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
-            }
-            
-            if (highlightsTitle) {
-              highlightsTitle.textContent = config.highlights_title || defaultConfig.highlights_title;
-            }
-            
-            if (footerText) {
-              footerText.textContent = config.footer_text || defaultConfig.footer_text;
-            }
-            
-            if (contactTitle) {
-              contactTitle.textContent = config.contact_title || defaultConfig.contact_title;
-            }
-          },
-          mapToCapabilities: (config) => ({
-            recolorables: [],
-            borderables: [],
-            fontEditable: undefined,
-            fontSizeable: undefined
-          }),
-          mapToEditPanelValues: (config) => new Map([
-            ['site_title', config.site_title || defaultConfig.site_title],
-            ['hero_title', config.hero_title || defaultConfig.hero_title],
-            ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
-            ['highlights_title', config.highlights_title || defaultConfig.highlights_title],
-            ['footer_text', config.footer_text || defaultConfig.footer_text],
-            ['contact_title', config.contact_title || defaultConfig.contact_title]
-          ])
-        });
-      }
-    }
-
-    // Start when page loads
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a08f87c4604f16b',t:'MTc2MzQ4NDY2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  </footer> -->
+  <script src="scripts/include.js"></script>
+  <script src="scripts/script.js"></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a08f87c4604f16b',t:'MTc2MzQ4NDY2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
 </html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título da Página</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div data-include="./components/header.html"></div>
+
+    <!-- CAPA / TOPO  -->
+    <div data-include="./components/topo.html"></div>
+
+    <!-- PÁGINA (cada página usará esta estrutura) -->
+    <div class="content-page active">
+
+        <!-- SEÇÃO DE TÍTULO PADRÃO -->
+        <section class="py-12 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h1 class="text-3xl font-bold text-center mb-4">
+                    Título da Página
+                </h1>
+                <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto">
+                    Subtítulo ou breve introdução da página.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTEÚDO COM ESTILO PADRÃO -->
+        <section class="py-16">
+            <div class="container mx-auto px-6 max-w-4xl">
+
+                <h2 class="text-2xl font-semibold mb-6">Título da Seção</h2>
+
+                <p class="mb-6 leading-relaxed text-gray-800">
+                    Seu conteúdo vai aqui.  
+                    Parágrafos, imagens, listas, tudo usando a estilização existente.
+                </p>
+
+                <!-- Exemplo de card estilizado -->
+                <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+                    <h3 class="text-xl font-semibold mb-3">Exemplo de Card</h3>
+                    <p class="text-gray-700">
+                        Um bloco com sombra e bordas arredondadas, no mesmo estilo do index.
+                    </p>
+                </div>
+
+                <!-- Exemplo de lista -->
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Item de lista exemplo</li>
+                    <li>Outro item importante</li>
+                    <li>Item com descrição maior para testar largura e espaçamento</li>
+                </ul>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- SEÇÃO DE CONTATO -->
+    <div data-include="./components/contato.html"></div>
+
+    <!-- FOOTER -->
+    <div data-include="./components/footer.html"></div>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/include.js"></script>
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
