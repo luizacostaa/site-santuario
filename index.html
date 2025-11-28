@@ -16,38 +16,76 @@
   <!-- Navigation -->
   <div data-include="./components/topo.html"></div>
 
+  <div class="carousel">
+    <div class="carousel-wrapper">
+
+        <!-- SLIDE 1 -->
+        <div class="carousel-slide">
+            <img src="./images/Horários missas e celebrações.png" alt="Imagem 1">
+            <a href="./noticia1.html" class="carousel-button">Leia Mais</a>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="carousel-slide">
+            <img src="./images/reportagem.png" alt="Imagem 2">
+            <a href="./noticia2.html" class="carousel-button">Leia Mais</a>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="carousel-slide">
+            <img src="./images/Horários missas e celebrações.png" alt="Imagem 3">
+            <a href="./noticia3.html" class="carousel-button">Leia Mais</a>
+        </div>
+
+    </div>
+
+    <!-- MINIATURAS -->
+    <div class="carousel-thumbnails">
+        <img src="./images/Horários missas e celebrações.png" onclick="goToSlide(0)">
+        <img src="./images/reportagem.png" onclick="goToSlide(1)">
+        <img src="./images/Horários missas e celebrações.png" onclick="goToSlide(2)">
+    </div>
+</div>
+
+
+
   <div class="carousel-container">
 
-    <div class="carousel-inner">
-  
-      <!-- SLIDE 1 -->
-      <div class="carousel-slide">
-        <img src="./images/slide1.jpg" alt="Imagem 1">
-        <a href="./noticia1.html" class="carousel-button">Leia Mais</a>
-      </div>
-  
-      <!-- SLIDE 2 -->
-      <div class="carousel-slide">
-        <img src="./images/slide2.jpg" alt="Imagem 2">
-        <a href="./noticia2.html" class="carousel-button">Leia Mais</a>
-      </div>
-  
-      <!-- SLIDE 3 -->
-      <div class="carousel-slide">
-        <img src="./images/slide3.jpg" alt="Imagem 3">
-        <a href="./noticia3.html" class="carousel-button">Leia Mais</a>
-      </div>
-  
+    <div class="carousel-slide active">
+        <img src="./images/Horários missas e celebrações.png" alt="Slide 1">
+        <div class="carousel-caption">
+            <h2>Festa da Padroeira 2024</h2>
+            <p>Momentos de fé e devoção vividos pela comunidade.</p>
+            <a href="../site-santuario/aba-noticias/noticias.html" class="carousel-button">Leia Mais</a>
+        </div>
     </div>
-  
-    <!-- PAGINATION (bolinhas) -->
-    <div class="carousel-pagination">
-      <span class="dot active" onclick="goToSlide(0)"></span>
-      <span class="dot" onclick="goToSlide(1)"></span>
-      <span class="dot" onclick="goToSlide(2)"></span>
+
+    <div class="carousel-slide">
+        <img src="./images/Horários missas e celebrações.png" alt="Slide 2">
+        <div class="carousel-caption">
+            <h2>Programação de Natal</h2>
+            <p>Celebre conosco a chegada do Salvador!</p>
+            <a href="../site-santuario/aba-noticias/noticias.html" class="carousel-button">Leia Mais</a>
+        </div>
     </div>
-  
-  </div>
+
+    <div class="carousel-slide">
+        <img src="./images/reportagem.png" alt="Slide 3">
+        <div class="carousel-caption">
+            <h2>Apresentação do Coral</h2>
+            <p>Um show emocionante no Santuário.</p>
+            <a href="../site-santuario/aba-noticias/noticias.html" class="carousel-button">Leia Mais</a>
+        </div>
+    </div>
+
+    <!-- Botões -->
+    <button class="carousel-prev">❮</button>
+    <button class="carousel-next">❯</button>
+
+    <!-- Pontinhos -->
+    <div class="carousel-dots"></div>
+</div>
+
   
 
   <!-- Home Page -->
@@ -80,9 +118,6 @@
     <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide(0)"></span> <span class="carousel-dot" onclick="goToSlide(1)"></span> <span class="carousel-dot" onclick="goToSlide(2)"></span> <span class="carousel-dot" onclick="goToSlide(3)"></span>
     </div>
    </section>
-
-   <!-- INspiração carrosel -->
-   <!-- <section class="container mp_slide">
 		<span class="mp_slide_time" id="3"></span>
 		<h1 class="fontzero">Conteúdo em Destaque:</h1>
 		
@@ -203,8 +238,8 @@
    </section>
    <!-- Sparkle Section -->
    <section class="sparkle-section sparkle-dark" id="sparkleSection" >
-    <div class="sparkle-content">
-     <h2 class="section-title">Venha nos Visitar</h2>
+    <div class="sparkle-content light">
+     <h2 class="section-title ">Venha nos Visitar</h2>
      <div class="page-content" style="padding: 20px 0;">
       <p style="text-align: center; font-size: 20px;">O Santuário Arquidiocesano Nossa Senhora Aparecida abre suas portas para todos que buscam um momento de paz, reflexão e proximidade com Deus. Seja bem-vindo à casa de Maria!</p>
      </div>
@@ -254,80 +289,11 @@
    </section>
   </div>
 
-   <div class="page-header">
-    <h1>Nossas Comunidades</h1>
-   </div>
-   <div class="page-content">
-    <p>O Santuário Arquidiocesano Nossa Senhora Aparecida é composto por diversas comunidades que, juntas, formam uma grande família de fé. Cada comunidade possui sua própria história e características, mas todas compartilham o mesmo amor por Cristo e devoção à Nossa Senhora.</p>
-    <div class="communities-grid">
-     <div class="community-card" onclick="navigateTo('comunidade-1')">
-      <div class="community-image">
-       ⛪
-      </div>
-      <div class="community-info">
-       <h3>Comunidade São José</h3>
-       <p>Uma comunidade acolhedora no bairro Centro</p>
-      </div>
-     </div>
-     <div class="community-card" onclick="navigateTo('comunidade-2')">
-      <div class="community-image">
-       ⛪
-      </div>
-      <div class="community-info">
-       <h3>Comunidade Santa Rita</h3>
-       <p>Fé e caridade no bairro Vila Nova</p>
-      </div>
-     </div>
-     <div class="community-card" onclick="navigateTo('comunidade-3')">
-      <div class="community-image">
-       ⛪
-      </div>
-      <div class="community-info">
-       <h3>Comunidade São Francisco</h3>
-       <p>Servindo com amor no bairro Jardim das Flores</p>
-      </div>
-     </div>
-     <div class="community-card" onclick="navigateTo('comunidade-4')">
-      <div class="community-image">
-       ⛪
-      </div>
-      <div class="community-info">
-       <h3>Comunidade Nossa Senhora das Graças</h3>
-       <p>Comunidade do bairro Bela Vista</p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- Comunidade Individual (exemplo) 
-  <div id="comunidade-1Page">
-   <div class="page-header">
-    <h1>Comunidade São José</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     ⛪
-    </div>
-    <h2>Nossa História</h2>
-    <p>A Comunidade São José foi fundada em 1985, quando um grupo de fiéis do bairro Centro sentiu a necessidade de ter um espaço mais próximo para suas celebrações e encontros de fé. Começando com encontros em casas de família, a comunidade cresceu e, com o apoio do Santuário, construiu sua própria capela.</p>
-    <p>Ao longo dos anos, a Comunidade São José tornou-se um centro de referência para o bairro, promovendo não apenas celebrações litúrgicas, mas também ações sociais e momentos de formação cristã.</p>
-    <div class="page-image">
-     🙏
-    </div>
-    <h2>Atividades e Celebrações</h2>
-    <p>A comunidade realiza missas aos domingos às 10h e terças-feiras às 19h. Além disso, promove encontros de catequese para crianças e adolescentes, grupos de oração e ações solidárias mensais.</p>
-    <p>Os membros da Comunidade São José são conhecidos por seu espírito acolhedor e pela dedicação em servir os mais necessitados, mantendo viva a tradição de caridade que caracteriza a família católica.</p>
-    <div class="page-image">
-     📞
-    </div>
-    <h2>Contato</h2>
-    <p><strong>Endereço:</strong> Rua das Flores, 123 - Centro</p>
-    <p><strong>Telefone:</strong> (11) 98765-4321</p>
-    <p><strong>Email:</strong> comunidade.saojose@santuario.com.br</p>
-    <p><strong>Coordenador:</strong> Sr. José Carlos Almeida</p>
-    <p style="margin-top: 40px; text-align: center; font-style: italic;">Venha nos visitar! Você será sempre bem-vindo!</p>
-   </div>
-  </div> -->
+
+
+
+  
+ 
  
  
   <!-- Contact Section -->

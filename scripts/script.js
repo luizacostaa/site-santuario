@@ -220,4 +220,78 @@
             navigateTo('homePage');
         });
       }
+
+
+      //NOvo carrossel
+      const slides = document.querySelectorAll(".carousel-slide");
+const prevBtn = document.querySelector(".carousel-prev");
+const nextBtn = document.querySelector(".carousel-next");
+const dotsContainer = document.querySelector(".carousel-dots");
+
+let current = 0;
+
+/* Criar pontinhos dinamicamente */
+slides.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.dataset.index = index;
+    dotsContainer.appendChild(dot);
+});
+
+const dots = dotsContainer.querySelectorAll("span");
+
+function updateCarousel() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+}
+
+prevBtn.addEventListener("click", () => {
+    current = (current === 0) ? slides.length - 1 : current - 1;
+    updateCarousel();
+});
+
+nextBtn.addEventListener("click", () => {
+    current = (current === slides.length - 1) ? 0 : current + 1;
+    updateCarousel();
+});
+
+/* Clicar nos pontinhos */
+dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+        current = Number(dot.dataset.index);
+        updateCarousel();
+    });
+});
+
+/* Passagem automática */
+setInterval(() => {
+    current = (current === slides.length - 1) ? 0 : current + 1;
+    updateCarousel();
+}, 5000); // troca a cada 5 segundos
+
+/* Inicializar */
+updateCarousel();
+
+
+
+
+
+// Mais outro carrossel aaa
+let currentSlidee = 0;
+
+function goToSlide(n) {
+    const wrapper = document.querySelector(".carousel-wrapper");
+    currentSlidee = n;
+    wrapper.style.transform = `translateX(-${n * 100}%)`;
+}
+
+// Auto-play opcional:
+setInterval(() => {
+    currentSlidee = (currentSlidee + 1) % 3;
+    goToSlide(currentSlidee);
+}, 5000); // troca a cada 5 segundos
+
+
     
