@@ -132,18 +132,20 @@
   
       // Create sparkles
       function createSparkles() {
-        const sparkleSection = document.getElementById('sparkleSection');
-        if (!sparkleSection) return;
-        
-        for (let i = 0; i < 50; i++) {
-          const sparkle = document.createElement('div');
-          sparkle.className = 'sparkle';
-          sparkle.style.left = Math.random() * 100 + '%';
-          sparkle.style.top = Math.random() * 100 + '%';
-          sparkle.style.animationDelay = Math.random() * 3 + 's';
-          sparkleSection.appendChild(sparkle);
-        }
+        const sections = document.querySelectorAll('.sparkle-section');
+      
+        sections.forEach(section => {
+          for (let i = 0; i < 50; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 3 + 's';
+            section.appendChild(sparkle);
+          }
+        });
       }
+      
   
       // Initialize
       function init() {
@@ -208,5 +210,14 @@
         document.addEventListener('DOMContentLoaded', init);
       } else {
         init();
+      }
+
+      // Serve para direcionar para outras páginas caso esteja no index.html
+      if (window.location.pathname.endsWith('index.html')) {
+        const homeLink = document.getElementById('homeLink');
+        homeLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            navigateTo('homePage');
+        });
       }
     

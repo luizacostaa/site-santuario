@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dízimo - Santuário Arquidiocesano Nossa Senhora Aparecida</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div data-include="../components/header.html"></div>
+
+    <!-- CAPA / TOPO  -->
+    <div data-include="../components/topo.html"></div>
+
+    <!-- PÁGINA (cada página usará esta estrutura) -->
+    <div>
+
+        <!-- SEÇÃO DE CONTEÚDO COM ESTILO PADRÃO -->
+        <div id="dizimoPage">
+            <!-- Dízimo Carousel -->
+           <section class="hero-carousel" id="dizimoCarousel"><button class="carousel-arrow prev" onclick="changeDizimoSlide(-1)">❮</button> <button class="carousel-arrow next" onclick="changeDizimoSlide(1)">❯</button>
+            <div class="carousel-slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
+             <div class="carousel-content">
+              <h2>Venha Ser Dizimista</h2>
+              <p>Participe da missão evangelizadora contribuindo com o dízimo</p><button class="btn-read-more" onclick="location.href='./venha_ser_dizimista.html.html'">Leia Mais</button>
+             </div>
+            </div>
+            <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #059669 0%, #10b981 100%);">
+             <div class="carousel-content">
+              <h2>Dimensões do Dízimo</h2>
+              <p>Compreenda o significado espiritual e comunitário do dízimo</p><button class="btn-read-more" onclick="navigateTo('dimensoes-dizimo')">Leia Mais</button>
+             </div>
+            </div>
+            <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);">
+             <div class="carousel-content">
+              <h2>Transparência</h2>
+              <p>Conheça como os recursos do dízimo são aplicados</p><button class="btn-read-more" onclick="navigateTo('transparencia-dizimo')">Leia Mais</button>
+             </div>
+            </div>
+            <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #dc2626 0%, #ef4444 100%);">
+             <div class="carousel-content">
+              <h2>Testemunhos</h2>
+              <p>Veja como o dízimo transforma vidas e comunidades</p><button class="btn-read-more" onclick="navigateTo('testemunhos-dizimo')">Leia Mais</button>
+             </div>
+            </div>
+            <div class="carousel-dots"><span class="carousel-dot active" onclick="goToDizimoSlide(0)"></span> <span class="carousel-dot" onclick="goToDizimoSlide(1)"></span> <span class="carousel-dot" onclick="goToDizimoSlide(2)"></span> <span class="carousel-dot" onclick="goToDizimoSlide(3)"></span>
+            </div>
+           </section>
+           <div class="page-content">
+            <h2 class="section-title">O Dízimo</h2>
+            <p>O dízimo é uma prática bíblica de ofertar a Deus a décima parte de nossos ganhos como sinal de gratidão e reconhecimento de que tudo o que temos vem Dele. Mais do que uma contribuição financeira, o dízimo é um gesto de fé, amor e compromisso com a comunidade.</p>
+            <p>Através do dízimo, participamos ativamente da missão evangelizadora da Igreja, contribuindo para a manutenção do Santuário, o sustento dos ministros, as obras sociais e todas as atividades pastorais que promovem o Reino de Deus.</p>
+            <div class="page-image">
+             💰
+            </div>
+            <h2>Boas Ações Realizadas</h2>
+            <p>Graças à generosidade dos dizimistas, o Santuário tem podido realizar diversas obras de caridade e evangelização:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+             <div style="text-align: center;">
+              <div class="page-image" style="height: 200px;">
+               🍞
+              </div>
+              <h3 style="color: #1e3a8a;">Distribuição de Alimentos</h3>
+              <p>Mais de 500 cestas básicas distribuídas mensalmente para famílias carentes</p>
+             </div>
+             <div style="text-align: center;">
+              <div class="page-image" style="height: 200px;">
+               👕
+              </div>
+              <h3 style="color: #1e3a8a;">Doação de Roupas</h3>
+              <p>Campanha permanente de arrecadação e distribuição de vestuário</p>
+             </div>
+             <div style="text-align: center;">
+              <div class="page-image" style="height: 200px;">
+               📚
+              </div>
+              <h3 style="color: #1e3a8a;">Projeto Educação</h3>
+              <p>Apoio a crianças carentes com material escolar e reforço pedagógico</p>
+             </div>
+             <div style="text-align: center;">
+              <div class="page-image" style="height: 200px;">
+               🏥
+              </div>
+              <h3 style="color: #1e3a8a;">Assistência à Saúde</h3>
+              <p>Apoio a doentes e idosos com medicamentos e acompanhamento</p>
+             </div>
+             <div style="text-align: center;">
+              <div class="page-image" style="height: 200px;">
+               🏠
+              </div>
+              <h3 style="color: #1e3a8a;">Reforma de Casas</h3>
+              <p>Auxílio na reforma de casas de famílias em situação de vulnerabilidade</p>
+             </div>
+             <div style="text-align: center;">
+              <div class="page-image" style="height: 200px;">
+               🙏
+              </div>
+              <h3 style="color: #1e3a8a;">Evangelização</h3>
+              <p>Investimento em materiais catequéticos e formação de agentes pastorais</p>
+             </div>
+            </div>
+            <p style="margin-top: 60px; text-align: center; font-size: 20px; font-style: italic;">"Cada um dê conforme tiver resolvido em seu coração, não com pesar ou por constrangimento, pois Deus ama quem dá com alegria." (2 Coríntios 9:7)</p>
+           </div>
+          </div>
+          <!-- Seja Dizimista Page -->
+          
+          <!-- Dimensões do Dízimo Page -->
+          
+
+    </div>
+
+    <!-- SEÇÃO DE CONTATO -->
+    <div data-include="../components/contato.html"></div>
+
+    <!-- FOOTER -->
+    <div data-include="../components/footer.html"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../scripts/include.js"></script>
+    <script src="../scripts/script.js"></script>
+
+</body>
+</html>

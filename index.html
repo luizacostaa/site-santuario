@@ -16,12 +16,46 @@
   <!-- Navigation -->
   <div data-include="./components/topo.html"></div>
 
+  <div class="carousel-container">
+
+    <div class="carousel-inner">
+  
+      <!-- SLIDE 1 -->
+      <div class="carousel-slide">
+        <img src="./images/slide1.jpg" alt="Imagem 1">
+        <a href="./noticia1.html" class="carousel-button">Leia Mais</a>
+      </div>
+  
+      <!-- SLIDE 2 -->
+      <div class="carousel-slide">
+        <img src="./images/slide2.jpg" alt="Imagem 2">
+        <a href="./noticia2.html" class="carousel-button">Leia Mais</a>
+      </div>
+  
+      <!-- SLIDE 3 -->
+      <div class="carousel-slide">
+        <img src="./images/slide3.jpg" alt="Imagem 3">
+        <a href="./noticia3.html" class="carousel-button">Leia Mais</a>
+      </div>
+  
+    </div>
+  
+    <!-- PAGINATION (bolinhas) -->
+    <div class="carousel-pagination">
+      <span class="dot active" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+  
+  </div>
+  
+
   <!-- Home Page -->
   <div id="homePage" class="content-page active"><!-- Hero Carousel -->
    <section class="hero-carousel" id="heroCarousel"><button class="carousel-arrow prev" onclick="changeSlide(-1)">❮</button> <button class="carousel-arrow next" onclick="changeSlide(1)">❯</button>
     <div class="carousel-slide active" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
      <div class="carousel-content">
-      <h2 id="heroTitle1">Bem-vindos ao Santuário</h2>
+      <h2 id="heroTitle1">Bem-vindos ao Santuário Arquidiocesano Nossa Senhora Aparecida</h2>
       <p id="heroSubtitle1">Um lugar sagrado de fé, oração e comunhão com Nossa Senhora Aparecida</p><button class="btn-read-more" onclick="navigateTo('historia')">Leia Mais</button>
      </div>
     </div>
@@ -46,6 +80,94 @@
     <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide(0)"></span> <span class="carousel-dot" onclick="goToSlide(1)"></span> <span class="carousel-dot" onclick="goToSlide(2)"></span> <span class="carousel-dot" onclick="goToSlide(3)"></span>
     </div>
    </section>
+
+   <!-- INspiração carrosel -->
+   <!-- <section class="container mp_slide">
+		<span class="mp_slide_time" id="3"></span>
+		<h1 class="fontzero">Conteúdo em Destaque:</h1>
+		
+				<article class="mp_slide_item" style="display: none;">
+			<a href="https://franciscanos.org.br/noticias/usf-e-provincia-oficializam-missao-compartilhada-com-o-lancamento-do-cepri.html#gsc.tab=0" title="">
+						<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</a>
+			<header class="mp_slide_item_desc tl-center">
+				<a href="https://franciscanos.org.br/noticias/usf-e-provincia-oficializam-missao-compartilhada-com-o-lancamento-do-cepri.html#gsc.tab=0" title="">
+								<h1 class="fontptserif font-700 t-transform-u"></h1>
+				</a>
+				<a href="https://franciscanos.org.br/noticias/usf-e-provincia-oficializam-missao-compartilhada-com-o-lancamento-do-cepri.html#gsc.tab=0" class="btn btn-cleanw t-transform-u" style="float: none; display: inline-block;" title="">
+				Leia Mais</a>
+			</header>
+		</article>
+				<article class="mp_slide_item" style="display: none;">
+			<a href="dizimo.html" title="">
+						<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</a>
+			<header class="mp_slide_item_desc tl-center">
+				<a href="dizimo.html" title="">
+								<h1 class="fontptserif font-700 t-transform-u"></h1>
+				</a>
+				<a href="dizimo.html" class="btn btn-cleanw t-transform-u" style="float: none; display: inline-block;" title="">
+				Leia Mais</a>
+			</header>
+		</article>
+				<article class="mp_slide_item first" style="display: block; opacity: 0.252271;">
+			<a href="https://franciscanos.org.br/noticias/sete-frades-serao-instituidos-leitores-e-acolitos-em-duque-de-caxias-neste-domingo.html" title="">
+						<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</a>
+			<header class="mp_slide_item_desc tl-center">
+				<a href="https://franciscanos.org.br/noticias/sete-frades-serao-instituidos-leitores-e-acolitos-em-duque-de-caxias-neste-domingo.html" title="">
+								<h1 class="fontptserif font-700 t-transform-u"></h1>
+				</a>
+				<a href="https://franciscanos.org.br/noticias/sete-frades-serao-instituidos-leitores-e-acolitos-em-duque-de-caxias-neste-domingo.html" class="btn btn-cleanw t-transform-u" style="float: none; display: inline-block;" title="">
+				Leia Mais</a>
+			</header>
+		</article>
+				<article class="mp_slide_item" style="display: none;">
+			<a href="reportagem.html" title="">
+						<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</a>
+			<header class="mp_slide_item_desc tl-center">
+				<a href="reportagem.html" title="">
+								<h1 class="fontptserif font-700 t-transform-u"></h1>
+				</a>
+				<a href="reportagem.html" class="btn btn-cleanw t-transform-u" style="float: none; display: inline-block;" title="">
+				Leia Mais</a>
+			</header>
+		</article>
+				<article class="mp_slide_item" style="display: none;">
+			<a href="https://franciscanos.org.br/noticias/jovens-buscam-escutar-o-chamado-de-deus-nos-estagios-vocacionais-franciscanos.html" title="">
+						<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</a>
+			<header class="mp_slide_item_desc tl-center">
+				<a href="https://franciscanos.org.br/noticias/jovens-buscam-escutar-o-chamado-de-deus-nos-estagios-vocacionais-franciscanos.html" title="">
+								<h1 class="fontptserif font-700 t-transform-u"></h1>
+				</a>
+				<a href="https://franciscanos.org.br/noticias/jovens-buscam-escutar-o-chamado-de-deus-nos-estagios-vocacionais-franciscanos.html" class="btn btn-cleanw t-transform-u" style="float: none; display: inline-block;" title="">
+				Leia Mais</a>
+			</header>
+		</article>
+				
+		<div class="mp_slide_pager">
+						<span class="mp-transition">
+				<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</span>
+						<span class="mp-transition">
+				<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</span>
+						<span class="mp-transition">
+				<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</span>
+						<span class="mp-transition active">
+				<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</span>
+						<span class="mp-transition">
+				<img src="./images/Horários missas e celebrações.png" title="" alt="">
+			</span>
+					</div>
+		
+	</section> -->
+
+
    <!-- Highlights Section -->
    <section class="highlights-section">
     <h2 class="section-title" id="highlightsTitle">Destaques</h2>
@@ -80,7 +202,7 @@
     </div>
    </section>
    <!-- Sparkle Section -->
-   <section class="sparkle-section" id="sparkleSection">
+   <section class="sparkle-section sparkle-dark" id="sparkleSection" >
     <div class="sparkle-content">
      <h2 class="section-title">Venha nos Visitar</h2>
      <div class="page-content" style="padding: 20px 0;">
@@ -88,6 +210,11 @@
      </div>
     </div>
    </section>
+
+
+
+ 
+
    <!-- Links Section -->
    <section class="links-section">
     <div class="links-grid">
@@ -126,253 +253,7 @@
     </div>
    </section>
   </div>
-  <!-- História Page -->
-  <div id="historiaPage" class="content-page">
-   <div class="page-header">
-    <h1>História do Santuário</h1>
-   </div>
-   <div class="page-content">
-    <p>O Santuário Arquidiocesano Nossa Senhora Aparecida tem uma história rica e profunda de fé que atravessa gerações. Fundado com o propósito de ser um centro de devoção mariana, o santuário tornou-se um ponto de referência espiritual para toda a região.</p>
-    <div class="page-image">
-     🏛️
-    </div>
-    <h2>Os Primeiros Anos</h2>
-    <p>Nos primeiros anos de sua fundação, o santuário era uma pequena capela que acolhia os fiéis devotos de Nossa Senhora Aparecida. Com o passar do tempo e o crescimento da devoção popular, a comunidade mobilizou-se para a construção de um templo maior e mais adequado.</p>
-    <div class="page-image">
-     📖
-    </div>
-    <h2>Crescimento e Expansão</h2>
-    <p>Ao longo das décadas, o santuário passou por diversas reformas e ampliações. Cada etapa de crescimento refletiu não apenas a expansão física, mas também o fortalecimento da fé e da comunidade que se reunia em torno da devoção à Padroeira.</p>
-    <p>Hoje, o Santuário Arquidiocesano Nossa Senhora Aparecida é reconhecido como um importante centro de evangelização e espiritualidade, acolhendo milhares de fiéis que buscam conforto, paz e renovação de sua fé.</p>
-    <div class="page-image">
-     ✨
-    </div>
-    <h2>Reconhecimento Arquidiocesano</h2>
-    <p>O reconhecimento como Santuário Arquidiocesano representa a importância e o significado deste local sagrado para a Igreja e para todos os devotos. Este título honra a tradição de fé e devoção que caracteriza este espaço sagrado.</p>
-   </div>
-  </div>
-  <!-- A Padroeira Page -->
-  <div id="padroeiraPage" class="content-page">
-   <div class="page-header">
-    <h1>Nossa Senhora Aparecida</h1>
-   </div>
-   <div class="page-content">
-    <p>Nossa Senhora Aparecida é a Padroeira do Brasil, cuja devoção se espalhou por todo o país e conquistou o coração de milhões de fiéis. Sua história é marcada pela fé, pelos milagres e pelo amor incondicional de Maria por seus filhos.</p>
-    <div class="page-image">
-     👑
-    </div>
-    <h2>A História da Aparição</h2>
-    <p>Em outubro de 1717, três pescadores - Domingos Garcia, João Alves e Filipe Pedroso - lançaram suas redes nas águas do Rio Paraíba do Sul. Após muitas tentativas sem sucesso, pescaram o corpo de uma imagem de Nossa Senhora da Conceição. Logo depois, pescaram a cabeça da mesma imagem.</p>
-    <p>A partir daquele momento, a pesca tornou-se abundante. Este foi o primeiro dos muitos milagres atribuídos à Nossa Senhora Aparecida, que passou a ser venerada com grande devoção.</p>
-    <div class="page-image">
-     🙏
-    </div>
-    <h2>Devoção e Milagres</h2>
-    <p>Com o passar dos anos, a fama dos milagres de Nossa Senhora Aparecida espalhou-se rapidamente. Romeiros de todas as partes do Brasil começaram a visitar a pequena capela onde a imagem era guardada, buscando graças e manifestando sua fé.</p>
-    <p>Em 1930, o Papa Pio XI proclamou Nossa Senhora Aparecida como Padroeira do Brasil, reconhecendo oficialmente a importância desta devoção para o povo brasileiro.</p>
-    <div class="page-image">
-     ⛪
-    </div>
-    <h2>Nossa Devoção</h2>
-    <p>O Santuário Arquidiocesano Nossa Senhora Aparecida mantém viva esta tradição de fé e devoção mariana. Aqui, os fiéis encontram um espaço de oração, acolhimento e renovação espiritual, seguindo o exemplo de amor e dedicação de Nossa Senhora.</p>
-    <p>Que a Mãe Aparecida continue intercedendo por todos nós e nos guiando sempre no caminho da fé e do amor a seu Filho Jesus Cristo.</p>
-   </div>
-  </div>
-  <!-- O Pároco Page -->
-  <div id="parocoPage" class="content-page">
-   <div class="page-header">
-    <h1>O Pároco</h1>
-   </div>
-   <div class="page-content">
-    <div class="clergy-card" style="max-width: 400px; margin: 0 auto 40px;">
-     <div class="clergy-photo">
-      👨‍⚖️
-     </div>
-     <h3>Pe. João Paulo da Silva</h3>
-     <p style="color: #6b7280;">Pároco Atual</p>
-    </div>
-    <h2>Trajetória Sacerdotal</h2>
-    <p>Padre João Paulo da Silva foi ordenado sacerdote em 2010, dedicando sua vida ao serviço de Deus e da comunidade. Com formação em Teologia pela Universidade Católica, desenvolveu um trabalho pastoral focado na evangelização e no fortalecimento da vida comunitária.</p>
-    <div class="page-image">
-     ✝️
-    </div>
-    <h2>Missão no Santuário</h2>
-    <p>Desde sua chegada ao Santuário Arquidiocesano Nossa Senhora Aparecida, Padre João Paulo tem se dedicado a fortalecer a vida espiritual da comunidade, promovendo encontros de formação, retiros espirituais e incentivando a participação ativa dos fiéis nas pastorais e movimentos.</p>
-    <p>Sua missão pastoral é caracterizada pela proximidade com o povo, pela escuta atenta e pelo testemunho de uma fé viva e comprometida com os valores do Evangelho. Sob sua liderança, o santuário tem se tornado cada vez mais um centro de acolhimento e evangelização.</p>
-    <div class="page-image">
-     📿
-    </div>
-    <h2>Visão Pastoral</h2>
-    <p>"Meu desejo é que este Santuário seja uma casa acolhedora para todos, onde cada pessoa possa encontrar paz, conforto e renovação em sua fé. Que Nossa Senhora Aparecida interceda por todos nós e nos conduza sempre mais perto de seu Filho Jesus."</p>
-   </div>
-  </div>
-  <!-- Párocos Anteriores Page -->
-  <div id="parocosAnterioresPage" class="content-page">
-   <div class="page-header">
-    <h1>Párocos Anteriores</h1>
-   </div>
-   <div class="page-content">
-    <p>Ao longo de sua história, o Santuário Arquidiocesano Nossa Senhora Aparecida foi abençoado com a presença de diversos sacerdotes que dedicaram suas vidas ao serviço pastoral e à evangelização.</p>
-    <div class="clergy-grid">
-     <div class="clergy-card">
-      <div class="clergy-photo">
-       👨‍⚖️
-      </div>
-      <h3>Pe. José Maria Santos</h3>
-      <p style="color: #6b7280;">2015 - 2020</p>
-     </div>
-     <div class="clergy-card">
-      <div class="clergy-photo">
-       👨‍⚖️
-      </div>
-      <h3>Pe. Antônio Carlos Oliveira</h3>
-      <p style="color: #6b7280;">2010 - 2015</p>
-     </div>
-     <div class="clergy-card">
-      <div class="clergy-photo">
-       👨‍⚖️
-      </div>
-      <h3>Pe. Francisco de Assis Lima</h3>
-      <p style="color: #6b7280;">2005 - 2010</p>
-     </div>
-     <div class="clergy-card">
-      <div class="clergy-photo">
-       👨‍⚖️
-      </div>
-      <h3>Pe. Pedro Paulo Ferreira</h3>
-      <p style="color: #6b7280;">2000 - 2005</p>
-     </div>
-     <div class="clergy-card">
-      <div class="clergy-photo">
-       👨‍⚖️
-      </div>
-      <h3>Pe. Manuel Rodrigues Costa</h3>
-      <p style="color: #6b7280;">1995 - 2000</p>
-     </div>
-     <div class="clergy-card">
-      <div class="clergy-photo">
-       👨‍⚖️
-      </div>
-      <h3>Pe. Luís Alberto Martins</h3>
-      <p style="color: #6b7280;">1990 - 1995</p>
-     </div>
-    </div>
-    <p style="margin-top: 40px; text-align: center; font-style: italic;">Somos gratos a todos os párocos que dedicaram suas vidas ao serviço desta comunidade de fé.</p>
-   </div>
-  </div>
-  <!-- Notícias Page -->
-  <div id="noticiasPage" class="content-page">
-   <div class="page-header">
-    <h1>Notícias</h1>
-   </div>
-   <div class="page-content">
-    <div class="news-grid">
-     <div class="news-card" onclick="navigateTo('noticia-1')">
-      <div class="news-image">
-       🎉
-      </div>
-      <div class="news-content">
-       <h3>Festa da Padroeira 2024</h3>
-       <p>Celebração em honra a Nossa Senhora Aparecida reuniu milhares de fiéis em momentos de fé e devoção.</p>
-       <div class="news-date">
-        15 de Outubro de 2024
-       </div>
-      </div>
-     </div>
-     <div class="news-card" onclick="navigateTo('noticia-2')">
-      <div class="news-image">
-       🎄
-      </div>
-      <div class="news-content">
-       <h3>Programação de Natal</h3>
-       <p>Confira a programação completa das celebrações natalinas em nosso Santuário.</p>
-       <div class="news-date">
-        01 de Dezembro de 2024
-       </div>
-      </div>
-     </div>
-     <div class="news-card" onclick="navigateTo('noticia-3')">
-      <div class="news-image">
-       👶
-      </div>
-      <div class="news-content">
-       <h3>Batizados Comunitários</h3>
-       <p>Inscrições abertas para o próximo batizado comunitário. Participe deste momento especial!</p>
-       <div class="news-date">
-        10 de Novembro de 2024
-       </div>
-      </div>
-     </div>
-     <div class="news-card" onclick="navigateTo('noticia-4')">
-      <div class="news-image">
-       📖
-      </div>
-      <div class="news-content">
-       <h3>Curso de Teologia</h3>
-       <p>Novo curso de teologia para leigos inicia em janeiro. Venha aprofundar sua fé!</p>
-       <div class="news-date">
-        05 de Dezembro de 2024
-       </div>
-      </div>
-     </div>
-     <div class="news-card" onclick="navigateTo('noticia-5')">
-      <div class="news-image">
-       🤝
-      </div>
-      <div class="news-content">
-       <h3>Campanha Solidária</h3>
-       <p>Ação solidária arrecada alimentos e agasalhos para famílias carentes da região.</p>
-       <div class="news-date">
-        20 de Novembro de 2024
-       </div>
-      </div>
-     </div>
-     <div class="news-card" onclick="navigateTo('noticia-6')">
-      <div class="news-image">
-       🎵
-      </div>
-      <div class="news-content">
-       <h3>Coral do Santuário</h3>
-       <p>Apresentação especial do coral encanta fiéis durante missa solene.</p>
-       <div class="news-date">
-        25 de Novembro de 2024
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
-  <!-- Notícia Individual (exemplo) -->
-  <div id="noticia-1Page" class="content-page">
-   <div class="page-header">
-    <h1>Festa da Padroeira 2024</h1>
-   </div>
-   <div class="page-content">
-    <div class="news-date" style="text-align: center; margin-bottom: 30px; font-size: 16px;">
-     15 de Outubro de 2024
-    </div>
-    <div class="page-image">
-     🎉
-    </div>
-    <p>A celebração em honra a Nossa Senhora Aparecida, realizada no dia 12 de outubro, foi um momento marcante de fé e devoção para toda a comunidade. Milhares de fiéis se reuniram no Santuário para prestar homenagem à Padroeira do Brasil.</p>
-    <h2>Programação Especial</h2>
-    <p>A festa contou com uma programação especial que incluiu missas solenes, procissão luminosa, apresentações musicais e momentos de oração. O Padre João Paulo presidiu a missa principal, que lotou completamente o Santuário.</p>
-    <div class="page-image">
-     ⛪
-    </div>
-    <h2>Momentos de Fé</h2>
-    <p>Durante a procissão, os fiéis carregaram a imagem de Nossa Senhora Aparecida pelas ruas ao redor do Santuário, em um momento emocionante de devoção mariana. Cânticos e orações preencheram o ar, criando uma atmosfera de profunda espiritualidade.</p>
-    <p>A comunidade também participou de ações solidárias, distribuindo alimentos e agasalhos para famílias necessitadas, demonstrando que a verdadeira devoção se manifesta também no amor ao próximo.</p>
-    <div class="page-image">
-     🙏
-    </div>
-    <h2>Agradecimentos</h2>
-    <p>Agradecemos a todos os voluntários, ministros, membros das pastorais e movimentos que trabalharam incansavelmente para que esta celebração fosse um sucesso. Que Nossa Senhora Aparecida continue abençoando e protegendo nossa comunidade!</p>
-    <p style="margin-top: 40px; color: #6b7280; font-style: italic;">Fonte: Comunicação do Santuário Arquidiocesano Nossa Senhora Aparecida</p>
-   </div>
-  </div>
-  <!-- Comunidades Page -->
-  <div id="comunidadesPage" class="content-page">
+
    <div class="page-header">
     <h1>Nossas Comunidades</h1>
    </div>
@@ -418,8 +299,8 @@
     </div>
    </div>
   </div>
-  <!-- Comunidade Individual (exemplo) -->
-  <div id="comunidade-1Page" class="content-page">
+ Comunidade Individual (exemplo) 
+  <div id="comunidade-1Page">
    <div class="page-header">
     <h1>Comunidade São José</h1>
    </div>
@@ -446,524 +327,14 @@
     <p><strong>Coordenador:</strong> Sr. José Carlos Almeida</p>
     <p style="margin-top: 40px; text-align: center; font-style: italic;">Venha nos visitar! Você será sempre bem-vindo!</p>
    </div>
-  </div>
-  <!-- Pastoral do Dízimo Page -->
-  <div id="pastoralDizimoPage" class="content-page">
-   <div class="page-header">
-    <h1>Pastoral do Dízimo</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     💝
-    </div>
-    <h2>Nossa Missão</h2>
-    <p>A Pastoral do Dízimo tem como missão promover a consciência sobre a importância da partilha e da contribuição financeira para a manutenção das obras da Igreja. Mais do que uma contribuição material, o dízimo é um gesto de fé, gratidão e compromisso com a comunidade.</p>
-    <p>Trabalhamos para que cada fiel compreenda o dízimo não como uma obrigação, mas como uma resposta generosa ao amor de Deus, participando ativamente da missão evangelizadora da Igreja.</p>
-    <div class="page-image">
-     📊
-    </div>
-    <h2>Como Funciona</h2>
-    <p>O dízimo é uma contribuição mensal voluntária, correspondente a 10% dos rendimentos de cada família. Os recursos arrecadados são utilizados para a manutenção do Santuário, pagamento de funcionários, obras de caridade e atividades pastorais.</p>
-    <p>A Pastoral do Dízimo realiza visitas periódicas às famílias dizimistas, promove encontros de formação e mantém total transparência na prestação de contas dos recursos recebidos.</p>
-    <div class="page-image">
-     🤝
-    </div>
-    <h2>Participe</h2>
-    <p>Para se tornar dizimista, basta procurar a secretaria do Santuário ou entrar em contato com a Pastoral do Dízimo. Você receberá carnês mensais e será integrado à nossa comunidade de partilha e solidariedade.</p>
-    <h2>Redes Sociais</h2>
-    <p>Siga-nos nas redes sociais para acompanhar nossas atividades e notícias:</p>
-    <p>📱 Instagram: @pastoraldizimo.santuario</p>
-    <p>📘 Facebook: Pastoral do Dízimo - Santuário N.S. Aparecida</p>
-   </div>
-  </div>
-  <!-- PASCOM Page -->
-  <div id="pascomPage" class="content-page">
-   <div class="page-header">
-    <h1>PASCOM - Pastoral da Comunicação</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     📢
-    </div>
-    <h2>Quem Somos</h2>
-    <p>A Pastoral da Comunicação (PASCOM) é responsável por toda a comunicação do Santuário, tanto interna quanto externa. Utilizamos diversos meios de comunicação para evangelizar, informar e fortalecer a comunhão entre os fiéis.</p>
-    <p>Nossa equipe é formada por voluntários dedicados que trabalham com fotografia, vídeo, redes sociais, sonorização e transmissões ao vivo das celebrações.</p>
-    <div class="page-image">
-     📱
-    </div>
-    <h2>Nossas Atividades</h2>
-    <p>A PASCOM é responsável por:</p>
-    <ul style="line-height: 2;">
-     <li>Transmissão ao vivo das missas e eventos</li>
-     <li>Gestão das redes sociais do Santuário</li>
-     <li>Produção de boletins e informativos</li>
-     <li>Cobertura fotográfica e em vídeo dos eventos</li>
-     <li>Sonorização das celebrações</li>
-     <li>Manutenção do site oficial</li>
-    </ul>
-    <div class="page-image">
-     🎥
-    </div>
-    <h2>Junte-se a Nós</h2>
-    <p>Se você tem habilidades em comunicação, fotografia, vídeo, design ou simplesmente deseja contribuir com a evangelização através dos meios de comunicação, venha fazer parte da PASCOM!</p>
-    <p>Realizamos reuniões quinzenais para planejamento e formação. Entre em contato conosco para saber mais sobre como participar.</p>
-    <h2>Redes Sociais</h2>
-    <p>📱 Instagram: @pascom.santuario</p>
-    <p>📘 Facebook: PASCOM - Santuário N.S. Aparecida</p>
-    <p>🎬 YouTube: Santuário N.S. Aparecida Oficial</p>
-   </div>
-  </div>
-  <!-- Grupo Shekinah Page -->
-  <div id="shekinahPage" class="content-page">
-   <div class="page-header">
-    <h1>Grupo Shekinah</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     🎵
-    </div>
-    <h2>Sobre o Grupo</h2>
-    <p>O Grupo Shekinah é um movimento de jovens e adultos que se reúnem semanalmente para momentos de louvor, oração e partilha da Palavra de Deus. O nome "Shekinah" significa "presença de Deus", e é exatamente isso que buscamos: experimentar a presença viva do Senhor em nossas vidas.</p>
-    <p>Através da música, da oração carismática e do estudo bíblico, o grupo promove o crescimento espiritual e a vivência comunitária da fé cristã.</p>
-    <div class="page-image">
-     🙏
-    </div>
-    <h2>Encontros</h2>
-    <p>Nossos encontros acontecem todas as sextas-feiras, às 20h, no salão paroquial. A programação inclui momento de louvor com músicas de adoração, partilha da Palavra, testemunhos e oração pelos presentes.</p>
-    <p>O Grupo Shekinah também participa ativamente das celebrações do Santuário, animando missas e eventos especiais com seu ministério de música.</p>
-    <div class="page-image">
-     ✨
-    </div>
-    <h2>Venha Participar</h2>
-    <p>Todos são bem-vindos aos nossos encontros! Não é necessário saber cantar ou tocar instrumentos. O mais importante é ter um coração aberto para louvar a Deus e crescer na fé junto com a comunidade.</p>
-    <p>Para mais informações, entre em contato através de nossas redes sociais ou procure-nos após as missas dominicais.</p>
-   </div>
-  </div>
-  <!-- Terço dos Homens Page -->
-  <div id="tercoHomensPage" class="content-page">
-   <div class="page-header">
-    <h1>Terço dos Homens</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     📿
-    </div>
-    <h2>Movimento de Fé Masculina</h2>
-    <p>O Terço dos Homens é um movimento mariano que reúne homens de todas as idades para rezar o Santo Terço e fortalecer sua fé através da devoção a Nossa Senhora. É um espaço de fraternidade, oração e crescimento espiritual.</p>
-    <p>Fundado com o objetivo de promover a presença masculina na vida da Igreja, o Terço dos Homens tem crescido continuamente, mostrando que a oração não tem idade nem distinção.</p>
-    <div class="page-image">
-     🤝
-    </div>
-    <h2>Nossos Encontros</h2>
-    <p>Nos reunimos todos os sábados, às 6h da manhã, para rezar o Santo Terço juntos. Após a oração, compartilhamos um café fraterno e momentos de convivência.</p>
-    <p>Além dos encontros semanais, o grupo organiza retiros espirituais, palestras sobre temas da fé e ações solidárias na comunidade.</p>
-    <div class="page-image">
-     💪
-    </div>
-    <h2>Seja um Terço dos Homens</h2>
-    <p>Se você é homem e deseja fortalecer sua vida espiritual, encontrar apoio na fé e conhecer outros irmãos que buscam viver o Evangelho, venha participar do Terço dos Homens!</p>
-    <p>Não é necessário inscrição prévia. Basta chegar no horário e você será muito bem recebido por nossos irmãos.</p>
-   </div>
-  </div>
-  <!-- Terço das Filhas de Maria Page -->
-  <div id="tercoFilhasPage" class="content-page">
-   <div class="page-header">
-    <h1>Terço das Filhas de Maria</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     🌹
-    </div>
-    <h2>Devoção Mariana Feminina</h2>
-    <p>O Terço das Filhas de Maria é um grupo de oração formado por mulheres devotas de Nossa Senhora. Com uma rica tradição na Igreja, este movimento reúne mulheres de todas as idades para rezar o terço e viver intensamente a espiritualidade mariana.</p>
-    <p>As Filhas de Maria são conhecidas por seu exemplo de fé, dedicação à oração e serviço à comunidade paroquial.</p>
-    <div class="page-image">
-     👗
-    </div>
-    <h2>Atividades do Grupo</h2>
-    <p>Nos encontramos todas as quartas-feiras, às 15h, na capela do Santuário para a reza do Santo Terço. Além da oração diária, o grupo promove:</p>
-    <ul style="line-height: 2;">
-     <li>Encontros mensais de formação mariana</li>
-     <li>Participação nas festas marianas</li>
-     <li>Visitas a doentes e necessitados</li>
-     <li>Confecção de terços e artigos religiosos</li>
-     <li>Organização de novenas e celebrações especiais</li>
-    </ul>
-    <div class="page-image">
-     💐
-    </div>
-    <h2>Venha Ser uma Filha de Maria</h2>
-    <p>Toda mulher que deseja crescer em sua devoção a Nossa Senhora está convidada a participar do nosso grupo. Aqui você encontrará um ambiente acolhedor de oração, partilha e amizade cristã.</p>
-    <p>Para participar, basta comparecer em um de nossos encontros. Será um prazer recebê-la em nossa família mariana!</p>
-   </div>
-  </div>
-  <!-- RCC Grupo de Oração Page -->
-  <div id="rccOracaoPage" class="content-page">
-   <div class="page-header">
-    <h1>RCC - Grupo de Oração</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     🕊️
-    </div>
-    <h2>Renovação Carismática Católica</h2>
-    <p>O Grupo de Oração da Renovação Carismática Católica (RCC) é um espaço de experiência profunda do amor de Deus através do Espírito Santo. Nossos encontros são marcados pelo louvor vibrante, oração carismática e renovação espiritual.</p>
-    <p>A RCC é um movimento aprovado pela Igreja Católica que busca promover uma renovação pessoal e comunitária através dos carismas do Espírito Santo.</p>
-    <div class="page-image">
-     🔥
-    </div>
-    <h2>Nossos Encontros</h2>
-    <p>Nos reunimos todas as quintas-feiras, às 20h, no salão paroquial. A programação inclui:</p>
-    <ul style="line-height: 2;">
-     <li>Louvor e adoração</li>
-     <li>Pregação da Palavra de Deus</li>
-     <li>Oração carismática</li>
-     <li>Testemunhos</li>
-     <li>Oração de cura e libertação</li>
-     <li>Momento de partilha</li>
-    </ul>
-    <div class="page-image">
-     🙌
-    </div>
-    <h2>Experiência do Espírito Santo</h2>
-    <p>No Grupo de Oração da RCC, você terá a oportunidade de experimentar uma relação mais íntima com Deus, conhecer os dons do Espírito Santo e crescer em sua vida de fé através dos carismas.</p>
-    <p>Também oferecemos o Seminário de Vida no Espírito Santo, um curso de formação básica sobre a vida carismática que acontece anualmente.</p>
-    <p>Venha experimentar o amor de Deus de uma forma nova! Todos são bem-vindos!</p>
-   </div>
-  </div>
-  <!-- RCC Grupo de Jovens Page -->
-  <div id="rccJovensPage" class="content-page">
-   <div class="page-header">
-    <h1>RCC - Grupo de Jovens</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     🎸
-    </div>
-    <h2>Juventude em Missão</h2>
-    <p>O Grupo de Jovens da RCC é formado por adolescentes e jovens adultos que desejam viver sua fé de forma intensa e comprometida. Somos uma família que busca experimentar o amor de Deus através do louvor, oração e da vivência comunitária.</p>
-    <p>Nosso grupo é um espaço onde os jovens podem ser eles mesmos, fazer amizades verdadeiras e crescer espiritualmente em um ambiente acolhedor e alegre.</p>
-    <div class="page-image">
-     🌟
-    </div>
-    <h2>Atividades</h2>
-    <p>Nos encontramos aos domingos, às 18h, no salão paroquial. Além dos encontros semanais, realizamos:</p>
-    <ul style="line-height: 2;">
-     <li>Retiros espirituais para jovens</li>
-     <li>Acampamentos e encontros de convivência</li>
-     <li>Participação em eventos da RCC</li>
-     <li>Ações missionárias e evangelização</li>
-     <li>Shows de música católica</li>
-     <li>Atividades recreativas e esportivas</li>
-    </ul>
-    <div class="page-image">
-     💫
-    </div>
-    <h2>Venha Fazer Parte</h2>
-    <p>Se você tem entre 15 e 35 anos e quer viver sua fé de forma vibrante, fazer amigos que compartilham os mesmos valores e experimentar o poder do Espírito Santo, o Grupo de Jovens da RCC é o seu lugar!</p>
-    <p>Não é necessário fazer parte da RCC ou ter experiência prévia. Venha como você está e descubra o plano maravilhoso que Deus tem para sua vida!</p>
-   </div>
-  </div>
-  <!-- Galeria Page -->
-  <div id="galeriaPage" class="content-page">
-   <div class="page-header">
-    <h1>Galeria de Fotos</h1>
-   </div>
-   <div class="page-content">
-    <p>Momentos especiais registrados nas celebrações e eventos do nosso Santuário. Cada imagem conta uma história de fé, amor e comunhão.</p>
-    <div class="gallery-grid">
-     <div class="album-card" onclick="alert('Álbum: Festa da Padroeira 2024\n\nAqui você encontraria todas as fotos da celebração em honra a Nossa Senhora Aparecida.')">
-      <div class="album-cover">
-       🎉
-      </div>
-      <div class="album-title">
-       Festa da Padroeira 2024
-      </div>
-     </div>
-     <div class="album-card" onclick="alert('Álbum: Natal 2023\n\nFotos das belíssimas celebrações natalinas do ano passado.')">
-      <div class="album-cover">
-       🎄
-      </div>
-      <div class="album-title">
-       Natal 2023
-      </div>
-     </div>
-     <div class="album-card" onclick="alert('Álbum: Páscoa 2024\n\nMomentos marcantes da Semana Santa e celebração pascal.')">
-      <div class="album-cover">
-       ✝️
-      </div>
-      <div class="album-title">
-       Páscoa 2024
-      </div>
-     </div>
-     <div class="album-card" onclick="alert('Álbum: Primeira Comunhão 2024\n\nA alegria das crianças no dia de sua Primeira Eucaristia.')">
-      <div class="album-cover">
-       🕊️
-      </div>
-      <div class="album-title">
-       Primeira Comunhão 2024
-      </div>
-     </div>
-     <div class="album-card" onclick="alert('Álbum: Crisma 2024\n\nJovens recebendo o Sacramento da Confirmação.')">
-      <div class="album-cover">
-       🔥
-      </div>
-      <div class="album-title">
-       Crisma 2024
-      </div>
-     </div>
-     <div class="album-card" onclick="alert('Álbum: Festa de São José 2024\n\nCelebração em honra ao padroeiro dos trabalhadores.')">
-      <div class="album-cover">
-       🛠️
-      </div>
-      <div class="album-title">
-       Festa de São José 2024
-      </div>
-     </div>
-     <div class="album-card" onclick="alert('Álbum: Ação Social 2024\n\nRegistros das ações solidárias realizadas pela comunidade.')">
-      <div class="album-cover">
-       🤝
-      </div>
-      <div class="album-title">
-       Ação Social 2024
-      </div>
-     </div>
-     <div class="album-card" onclick="alert('Álbum: Retiro Espiritual\n\nMomentos de oração e reflexão no retiro paroquial.')">
-      <div class="album-cover">
-       🙏
-      </div>
-      <div class="album-title">
-       Retiro Espiritual
-      </div>
-     </div>
-     <div class="album-card" onclick="alert('Álbum: Procissão de Corpus Christi\n\nA bela procissão pelas ruas em celebração ao Corpo de Cristo.')">
-      <div class="album-cover">
-       🌺
-      </div>
-      <div class="album-title">
-       Corpus Christi 2024
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
-  <!-- Dízimo Page -->
-  <div id="dizimoPage" class="content-page">
-    <!-- Dízimo Carousel -->
-   <section class="hero-carousel" id="dizimoCarousel"><button class="carousel-arrow prev" onclick="changeDizimoSlide(-1)">❮</button> <button class="carousel-arrow next" onclick="changeDizimoSlide(1)">❯</button>
-    <div class="carousel-slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
-     <div class="carousel-content">
-      <h2>Venha Ser Dizimista</h2>
-      <p>Participe da missão evangelizadora contribuindo com o dízimo</p><button class="btn-read-more" onclick="navigateTo('seja-dizimista')">Leia Mais</button>
-     </div>
-    </div>
-    <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #059669 0%, #10b981 100%);">
-     <div class="carousel-content">
-      <h2>Dimensões do Dízimo</h2>
-      <p>Compreenda o significado espiritual e comunitário do dízimo</p><button class="btn-read-more" onclick="navigateTo('dimensoes-dizimo')">Leia Mais</button>
-     </div>
-    </div>
-    <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);">
-     <div class="carousel-content">
-      <h2>Transparência</h2>
-      <p>Conheça como os recursos do dízimo são aplicados</p><button class="btn-read-more" onclick="navigateTo('transparencia-dizimo')">Leia Mais</button>
-     </div>
-    </div>
-    <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #dc2626 0%, #ef4444 100%);">
-     <div class="carousel-content">
-      <h2>Testemunhos</h2>
-      <p>Veja como o dízimo transforma vidas e comunidades</p><button class="btn-read-more" onclick="navigateTo('testemunhos-dizimo')">Leia Mais</button>
-     </div>
-    </div>
-    <div class="carousel-dots"><span class="carousel-dot active" onclick="goToDizimoSlide(0)"></span> <span class="carousel-dot" onclick="goToDizimoSlide(1)"></span> <span class="carousel-dot" onclick="goToDizimoSlide(2)"></span> <span class="carousel-dot" onclick="goToDizimoSlide(3)"></span>
-    </div>
-   </section>
-   <div class="page-content">
-    <h2 class="section-title">O Dízimo</h2>
-    <p>O dízimo é uma prática bíblica de ofertar a Deus a décima parte de nossos ganhos como sinal de gratidão e reconhecimento de que tudo o que temos vem Dele. Mais do que uma contribuição financeira, o dízimo é um gesto de fé, amor e compromisso com a comunidade.</p>
-    <p>Através do dízimo, participamos ativamente da missão evangelizadora da Igreja, contribuindo para a manutenção do Santuário, o sustento dos ministros, as obras sociais e todas as atividades pastorais que promovem o Reino de Deus.</p>
-    <div class="page-image">
-     💰
-    </div>
-    <h2>Boas Ações Realizadas</h2>
-    <p>Graças à generosidade dos dizimistas, o Santuário tem podido realizar diversas obras de caridade e evangelização:</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-     <div style="text-align: center;">
-      <div class="page-image" style="height: 200px;">
-       🍞
-      </div>
-      <h3 style="color: #1e3a8a;">Distribuição de Alimentos</h3>
-      <p>Mais de 500 cestas básicas distribuídas mensalmente para famílias carentes</p>
-     </div>
-     <div style="text-align: center;">
-      <div class="page-image" style="height: 200px;">
-       👕
-      </div>
-      <h3 style="color: #1e3a8a;">Doação de Roupas</h3>
-      <p>Campanha permanente de arrecadação e distribuição de vestuário</p>
-     </div>
-     <div style="text-align: center;">
-      <div class="page-image" style="height: 200px;">
-       📚
-      </div>
-      <h3 style="color: #1e3a8a;">Projeto Educação</h3>
-      <p>Apoio a crianças carentes com material escolar e reforço pedagógico</p>
-     </div>
-     <div style="text-align: center;">
-      <div class="page-image" style="height: 200px;">
-       🏥
-      </div>
-      <h3 style="color: #1e3a8a;">Assistência à Saúde</h3>
-      <p>Apoio a doentes e idosos com medicamentos e acompanhamento</p>
-     </div>
-     <div style="text-align: center;">
-      <div class="page-image" style="height: 200px;">
-       🏠
-      </div>
-      <h3 style="color: #1e3a8a;">Reforma de Casas</h3>
-      <p>Auxílio na reforma de casas de famílias em situação de vulnerabilidade</p>
-     </div>
-     <div style="text-align: center;">
-      <div class="page-image" style="height: 200px;">
-       🙏
-      </div>
-      <h3 style="color: #1e3a8a;">Evangelização</h3>
-      <p>Investimento em materiais catequéticos e formação de agentes pastorais</p>
-     </div>
-    </div>
-    <p style="margin-top: 60px; text-align: center; font-size: 20px; font-style: italic;">"Cada um dê conforme tiver resolvido em seu coração, não com pesar ou por constrangimento, pois Deus ama quem dá com alegria." (2 Coríntios 9:7)</p>
-   </div>
-  </div>
-  <!-- Seja Dizimista Page -->
-  <div id="sejaDizimistaPage" class="content-page">
-   <div class="page-header">
-    <h1>Venha Ser Dizimista</h1>
-   </div>
-   <div class="page-content">
-    <div class="page-image">
-     💝
-    </div>
-    <h2>Por Que Ser Dizimista?</h2>
-    <p>Ser dizimista é muito mais do que contribuir financeiramente com a Igreja. É uma resposta de amor e gratidão a Deus por todas as bênçãos recebidas. É reconhecer que tudo o que temos vem de Deus e que somos administradores, não proprietários, dos bens que possuímos.</p>
-    <p>O dízimo é uma prática bíblica que nos ajuda a crescer espiritualmente, desenvolvendo a virtude da generosidade e da confiança em Deus. Além disso, ao dizimar, você se torna parte ativa da missão evangelizadora da Igreja.</p>
-    <div class="page-image">
-     📋
-    </div>
-    <h2>Como Se Tornar Dizimista</h2>
-    <p>Para se tornar dizimista do Santuário Arquidiocesano Nossa Senhora Aparecida, siga estes passos:</p>
-    <ol style="line-height: 2.5; font-size: 18px;">
-     <li><strong>Procure a Secretaria Paroquial:</strong> Visite a secretaria do Santuário nos horários de atendimento (segunda a sexta, das 9h às 17h)</li>
-     <li><strong>Cadastro:</strong> Faça seu cadastro fornecendo seus dados pessoais e informações de contato</li>
-     <li><strong>Defina o Valor:</strong> Estabeleça o valor mensal do seu dízimo (recomenda-se 10% da renda familiar)</li>
-     <li><strong>Escolha a Forma de Pagamento:</strong> Você pode optar por pagamento em dinheiro, cheque, transferência bancária ou débito automático</li>
-     <li><strong>Receba seus Carnês:</strong> Você receberá carnês mensais para o pagamento do dízimo</li>
-    </ol>
-    <div class="page-image">
-     💳
-    </div>
-    <h2>Formas de Contribuição</h2>
-    <p><strong>Presencialmente:</strong> Na secretaria paroquial ou durante as missas aos domingos</p>
-    <p><strong>Transferência Bancária:</strong></p>
-    <p style="margin-left: 20px;">Banco: Banco do Brasil<br>
-      Agência: 1234-5<br>
-      Conta Corrente: 12345-6<br>
-      CNPJ: 12.345.678/0001-90<br>
-      Favorecido: Santuário N.S. Aparecida</p>
-    <p><strong>PIX:</strong> dizimo@santuario.com.br</p>
-    <div class="page-image">
-     🎁
-    </div>
-    <h2>Benefícios Espirituais</h2>
-    <p>Como dizimista, você:</p>
-    <ul style="line-height: 2;">
-     <li>Participa ativamente da missão evangelizadora da Igreja</li>
-     <li>Contribui para a manutenção do Santuário e suas obras</li>
-     <li>Desenvolve a virtude da generosidade</li>
-     <li>Experimenta a providência divina em sua vida</li>
-     <li>Recebe orações especiais nas missas pelo dizimistas</li>
-     <li>Faz parte da família de contribuintes do Santuário</li>
-    </ul>
-    <p style="margin-top: 40px; text-align: center; font-size: 20px;">Venha fazer parte da família de dizimistas do Santuário! Sua contribuição faz a diferença!</p>
-   </div>
-  </div>
-  <!-- Dimensões do Dízimo Page -->
-  <div id="dimensoesDizimoPage" class="content-page">
-   <div class="page-header">
-    <h1>Dimensões do Dízimo</h1>
-   </div>
-   <div class="page-content">
-    <p>O dízimo possui múltiplas dimensões que vão além do aspecto financeiro. Compreender essas dimensões nos ajuda a viver esta prática com mais profundidade e significado.</p>
-    <div class="page-image">
-     📖
-    </div>
-    <h2>Dimensão Bíblica</h2>
-    <p>O dízimo tem suas raízes nas Sagradas Escrituras. Desde o Antigo Testamento, encontramos o povo de Deus ofertando a décima parte de seus bens como reconhecimento da soberania divina e gratidão pelas bênçãos recebidas.</p>
-    <p>"Trazei todos os dízimos à casa do tesouro, para que haja mantimento na minha casa, e provai-me nisto, diz o Senhor dos Exércitos, se eu não vos abrir as janelas do céu e não derramar sobre vós bênção sem medida." (Malaquias 3:10)</p>
-    <div class="page-image">
-     🙏
-    </div>
-    <h2>Dimensão Espiritual</h2>
-    <p>Espiritualmente, o dízimo é um ato de fé e confiança em Deus. É um exercício de desapego dos bens materiais e reconhecimento de que Deus é o provedor de tudo o que temos. Ao dizimar, desenvolvemos virtudes como a generosidade, a gratidão e a confiança na providência divina.</p>
-    <p>O dízimo nos ajuda a colocar Deus em primeiro lugar em nossas vidas, reconhecendo que Ele é mais importante do que nossos bens materiais.</p>
-    <div class="page-image">
-     ⛪
-    </div>
-    <h2>Dimensão Eclesial</h2>
-    <p>Na dimensão eclesial, o dízimo é o meio pelo qual os fiéis contribuem para a manutenção da Igreja e suas obras. Permite que a comunidade realize sua missão evangelizadora, mantenha os templos, sustente os ministros e promova ações pastorais e sociais.</p>
-    <p>Ao dizimar, nos tornamos corresponsáveis pela missão da Igreja, participando ativamente de sua vida e missão.</p>
-    <div class="page-image">
-     🤝
-    </div>
-    <h2>Dimensão Comunitária</h2>
-    <p>O dízimo tem uma dimensão comunitária fundamental. Através dele, manifestamos nosso compromisso com a comunidade de fé, contribuindo para o bem comum e para o sustento das obras que beneficiam a todos.</p>
-    <p>É um exercício de solidariedade cristã, onde cada um contribui segundo suas possibilidades para que todos possam ser beneficiados pelas ações da comunidade paroquial.</p>
-    <div class="page-image">
-     ❤️
-    </div>
-    <h2>Dimensão Social</h2>
-    <p>Na dimensão social, o dízimo permite que a Igreja realize obras de caridade e assistência aos mais necessitados. Parte dos recursos do dízimo é destinada a ações sociais que beneficiam famílias carentes, doentes, idosos e todos aqueles que precisam de ajuda.</p>
-    <p>Assim, o dízimo se torna um instrumento concreto de amor ao próximo e de promoção da justiça social.</p>
-    <div class="page-image">
-     🌱
-    </div>
-    <h2>Dimensão Pessoal</h2>
-    <p>Pessoalmente, o dízimo é uma escola de generosidade e desapego. Ao ofertar regularmente uma parte de nossos ganhos, aprendemos a administrar melhor nossos recursos, a valorizar o que temos e a confiar mais em Deus do que em nossos próprios esforços.</p>
-    <p>Muitos dizimistas testemunham que, ao começar a dizimar, experimentaram uma transformação em sua vida financeira e espiritual, sendo abençoados de maneiras inesperadas.</p>
-   </div>
-  </div>
+  </div> -->
+ 
+ 
   <!-- Contact Section -->
   <div data-include="./components/contato.html"></div>
-   <div class="contact-container">
-    <div class="contact-info">
-     <h3 id="contactTitle">Entre em Contato</h3>
-     <p>📍 Endereço: Praça da Matriz, s/n - Centro</p>
-     <p>📞 Telefone: (11) 1234-5678</p>
-     <p>📱 WhatsApp: (11) 98765-4321</p>
-     <p>✉️ Email: contato@santuario.com.br</p>
-    </div>
-    <div class="contact-info">
-     <h3>Horário de Atendimento</h3>
-     <p>Segunda a Sexta: 9h às 17h</p>
-     <p>Sábado: 9h às 12h</p>
-     <p>Domingo: Apenas durante as missas</p>
-    </div>
-    <div class="contact-info">
-     <h3>Horário de Missas</h3>
-     <p>Domingo: 7h, 9h, 11h e 19h</p>
-     <p>Segunda a Sexta: 7h e 19h</p>
-     <p>Sábado: 18h (Missa de Sábado)</p>
-    </div>
-   </div>
-  </section> -->
+  </section> 
   <!-- Footer -->
   <div data-include="./components/footer.html"></div>  
-   <div class="footer-logo">
-    Santuário<br>
-    N.S. Aparecida
-   </div>
-   <p class="footer-text" id="footerText">Santuário Arquidiocesano Nossa Senhora Aparecida</p>
-   <p style="margin-top: 20px; font-size: 14px;">© 2024 Todos os direitos reservados</p>
-  </footer> -->
   <script src="scripts/include.js"></script>
   <script src="scripts/script.js"></script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a08f87c4604f16b',t:'MTc2MzQ4NDY2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>

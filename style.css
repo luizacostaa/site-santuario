@@ -331,6 +331,59 @@
       z-index: 1;
     }
 
+    .sparkle-dark {
+      background: linear-gradient(135deg, #0a1444 0%, #13256b 100%);
+    }
+
+    .sparkle-bege {
+      background: linear-gradient(135deg, #f7ecd5 0%, #f3e3c2 100%);
+    }
+
+    /* Remove padding padrão da sparkle-section */
+    .no-padding-section {
+      padding: 0 !important;
+      min-height: var(--section-height, auto);
+    }
+
+    /* Wrapper principal: texto à esquerda, imagem à direita */
+    .sparkle-flex {
+      display: flex;
+      align-items: stretch;
+      height: 100%;
+  }
+
+    /* Esquerda */
+    .sparkle-left {
+      width: 60%;
+      padding-left: 40px;   /* mantém espaço lateral */
+      padding-right: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* CENTRALIZA verticalmente */
+      z-index: 2;
+  }
+  
+
+    /* Parágrafo estilizado */
+    .section-paragraph {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* Direita (imagem colada no canto) */
+    .sparkle-right img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;      /* cobre a altura sem distorcer */
+    }
+
+    .sparkle-right img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+  }
+
     /* Links Section */
     .links-section {
       background: #1e3a8a;
@@ -733,3 +786,19 @@
         grid-template-columns: 1fr;
       }
     }
+
+
+/* RESPONSIVO: No celular vira coluna */
+@media (max-width: 900px) {
+  .sparkle-flex {
+      flex-direction: column;
+  }
+
+  .sparkle-left, .sparkle-right {
+      width: 100%;
+  }
+
+  .sparkle-right img {
+      height: auto; /* para não esticar no mobile */
+  }
+}  
