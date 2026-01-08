@@ -810,3 +810,177 @@
       height: auto; /* para não esticar no mobile */
   }
 }  
+
+/* =========================================
+   ESTILOS DO CARROSSEL
+   ========================================= */
+   .carousel-container {
+    position: relative;
+    width: 100%;
+    /* Define a proporção (aspect ratio) para evitar pulos na tela */
+    aspect-ratio: 16 / 6; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: #f0f9ff;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 1;
+  }
+  
+  .carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Fallback SVG (quando não há imagem) */
+  .carousel-image-fallback {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Botão "Leia Mais" */
+  .read-more-btn {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 32px;
+    background: rgba(30, 58, 138, 0.8); /* Azul do santuário */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  
+  .read-more-btn:hover {
+    background: #d4af37; /* Dourado no hover */
+    border-color: #d4af37;
+    transform: translate(-50%, -50%) scale(1.05);
+    color: #1e3a8a;
+    font-weight: bold;
+  }
+
+  /* Container geral do carrossel */
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column; /* Coloca um item embaixo do outro (Miniaturas em cima, Slides embaixo) */
+  gap: 20px; /* Espaço entre as miniaturas e a imagem grande */
+}
+
+/* --- ÁREA DAS MINIATURAS (EM CIMA) --- */
+.thumbnails-container {
+  display: flex;
+  justify-content: center; /* Centraliza as miniaturas */
+  gap: 15px; /* Espaço entre cada miniatura */
+  flex-wrap: wrap;
+}
+
+.thumb-item {
+  width: 100px;  /* Largura da miniatura */
+  height: 60px;  /* Altura da miniatura */
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0.6; /* Deixa meio apagadinho quando não está selecionado */
+  transition: all 0.3s ease;
+  border: 2px solid transparent; /* Borda invisível para não pular tamanho */
+  overflow: hidden;
+  position: relative;
+}
+
+/* O conteúdo visual da miniatura (pode ser a imagem pequena ou uma cor) */
+.thumb-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Quando passamos o mouse ou quando está ATIVO */
+.thumb-item:hover,
+.thumb-item.active {
+  opacity: 1; /* Fica totalmente visível */
+  transform: translateY(-3px); /* Sobe um pouquinho */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.thumb-item.active {
+  border-color: #1e3a8a; /* Borda azul quando selecionado */
+}
+
+
+/* --- ÁREA DOS SLIDES (EMBAIXO) --- */
+.slides-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 6; /* Formato retangular largo */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background: #f0f9ff;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Começa invisível */
+  transition: opacity 0.5s ease-in-out; /* Efeito suave de aparecer */
+  z-index: 1;
+  pointer-events: none; /* Não deixa clicar quando está invisível */
+}
+
+.carousel-slide.active {
+  opacity: 1; /* Fica visível */
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Botão dentro do slide */
+.slide-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 58, 138, 0.9);
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+}
+  
+  /* Ajuste Responsivo para Mobile */
+  @media (max-width: 768px) {
+    .carousel-container {
+      aspect-ratio: 4 / 3; /* Mais alto no celular */
+    }
+    
+    .read-more-btn {
+      width: 80%;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
